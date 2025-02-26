@@ -17,7 +17,7 @@ Hello! I am **Chihling Lo**, currently pursuing a **Master's degree in Financial
 
 
 ### Education
-- **National Yang Ming Chiao Tung University (NYCU)** – Graduate Institute of Information Management and Finance, Financial Engineering Program (2024 - Present)
+- **National Yang Ming Chiao Tung University (NYCU)** – Department of Information Management and Finance, Financial Engineering Program (2024 - Present)
 - **National Chengchi University (NCCU)** – Department of Applied Mathematics (2020 - 2024)
 - **Taichung Girls' Senior High School(TCGS)** (2017 - 2020)
 
