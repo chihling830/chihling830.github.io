@@ -1,8 +1,7 @@
 ---
 layout: home
 title: "Welcome to My Site"
-theme: jekyll-theme-cayman 
-
+theme: jekyll-theme-cayman
 ---
 
 # Hello, I'm Chihling!
@@ -11,38 +10,40 @@ Welcome to my personal website. Here, I share my research and projects.
 
 ---
 
-## 關於我
+## About Me
 
-你好！我是 **羅芷羚**，目前就讀於 **國立陽明交通大學 財務工程碩士學位**。
+Hello! I am **Chihling Lo**, currently pursuing a **Master's degree in Financial Engineering at National Yang Ming Chiao Tung University**.
 
-### 學歷
-- **國立陽明交通大學**（NYCU）- 資訊管理與財務金融研究所，財務工程組（2024 - ）
-- **國立政治大學**（NCCU）- 應用數學系（2020 - 2024）
-- **臺中市立臺中女中**（2017 - 2020）
+<img src="https://github.com/user-attachments/assets/a3ace08f-0d22-497f-8e94-94d1ab3244f5" alt="Profile Picture" width="200">
 
-### 研究方向
-- 員工認股選擇權
 
-### 技術專長
-#### 數理統計
-- 高等微積分、離散數學、微分方程、數值分析、作業研究、數理統計
+### Education
+- **National Yang Ming Chiao Tung University (NYCU)** – Graduate Institute of Information Management and Finance, Financial Engineering Program (2024 - Present)
+- **National Chengchi University (NCCU)** – Department of Applied Mathematics (2020 - 2024)
+- **Taichung Girls' Senior High School(TCGS)** (2017 - 2020)
 
-#### 財務工程
-- 財務數學、財務數值方法、隨機微積分、計量經濟學、衍生性商品
+### Research Interests
+- Employee Stock Options
 
-#### 程式能力
-- Python、MATLAB、R、SAS
+### Technical Skills
+#### Mathematical Statistics
+- Advanced Calculus, Discrete Mathematics, Differential Equations, Numerical Analysis, Operations Research, Mathematical Statistics
 
----
+#### Financial Engineering
+- Financial Mathematics, Numerical Methods in Finance, Stochastic Calculus, Econometrics, Derivatives
 
-## 研究專案
-### 新光人壽業務員挪用偵測專案（2023）
-- **研究方法**：利用機器學習的方法，從新光人壽提供的資料集中，找出可能挪用資金的業務員特徵，藉此制定例行性的查核計畫，以保障公司的商譽與資產。
+#### Programming
+- Python, MATLAB, R, SAS
 
 ---
 
-## 聯絡方式
+## Research Projects
+### Shin-Kong Insurance Sales Agent Misuse Detection Project (2023)
+- **Research Method**: Applied machine learning techniques to analyze datasets provided by Shin Kong Life Insurance, identifying key characteristics of agents involved in fund misappropriation. The findings contributed to developing routine audit plans to protect the company's reputation and assets.
+
+---
+
+## Contact Information
 - **GitHub**: [chihling830](https://github.com/chihling830)
 - **Phone**: 0905-111-130
 - **Email**: [irene91083@gmail.com](mailto:irene91083@gmail.com)
-
