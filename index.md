@@ -2,6 +2,10 @@
 layout: home
 title: "Welcome to My Site"
 theme: jekyll-theme-cayman 
+git add .
+git commit -m "Force update GitHub Pages theme"
+git push
+
 ---
 
 # Hello, I'm Chihling!
