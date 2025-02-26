@@ -1,7 +1,6 @@
 ---
 layout: home
 title: "Welcome to My Site"
-theme: jekyll-theme-cayman
 ---
 
 # Hello, I'm Chihling!
