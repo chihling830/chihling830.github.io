@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0f;
+  color: #eaeaea;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.hero h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #9aa0a6;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.btn.primary:hover {
+  opacity: 0.85;
+}
+
+.btn.outline {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
