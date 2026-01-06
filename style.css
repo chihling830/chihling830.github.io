@@ -84,3 +84,39 @@ body {
 .social a:hover {
   color: #ffffff;
 }
+/* ===== Layout base for one-page sections ===== */
+:root {
+  --page-pad: 8%;
+  --maxw: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  padding-top: 90px; /* 預留 navbar 高度 */
+}
+
+.section {
+  padding: 90px var(--page-pad);
+}
+
+.section-inner {
+  max-width: var(--maxw);
+}
+
+/* Section title like the example site */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.section-underline {
+  width: 52px;
+  height: 3px;
+  background: #fff;
+  opacity: 0.9;
+  margin-bottom: 2.2rem;
+}
