@@ -157,3 +157,50 @@ html {
 .nav-right a:hover {
   color: #ffffff;
 }
+/* ===== About: timeline + tags ===== */
+.timeline {
+  border-left: 2px solid rgba(255,255,255,0.18);
+  padding-left: 26px;
+  max-width: 900px;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.dot {
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.muted {
+  color: #c7c7c7;
+  opacity: 0.9;
+}
+
+.subhead {
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  color: #eaeaea;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.03);
+}
