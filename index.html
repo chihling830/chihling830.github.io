@@ -1,48 +1,118 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Chihling Lo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
-  <div class="nav-left">CL.</div>
-
-  <div class="nav-right">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<div class="main">
-  <section class="hero">
-    <h1>Hello, I'm</h1>
-    <h2>Chihling Lo</h2>
-
-    <p>
-      Master's student in Financial Engineering at National Yang Ming Chiao Tung University,
-      with interests in quantitative finance, risk modeling, and machine learning.
-    </p>
-
-    <div class="buttons">
-      <a href="cv.html" class="btn primary">View CV</a>
-      <a href="mailto:your@email.com" class="btn outline">Contact Me</a>
+    <div class="nav-left">CL.</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="social">
-      <a href="https://github.com/chihling830" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/你的LinkedInID" target="_blank">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-</div>
-  </section>
+  </nav>
+
+  <div class="main">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Hello, I'm</h1>
+      <h2>Chihling Lo</h2>
+
+      <p>
+        Master's student in Financial Engineering at National Yang Ming Chiao Tung University,
+        with interests in quantitative finance, risk modeling, and machine learning.
+      </p>
+
+      <div class="buttons">
+        <a href="cv.html" class="btn primary">View CV</a>
+        <a href="mailto:your@email.com" class="btn outline">Contact Me</a>
+      </div>
+
+      <div class="social">
+        <a href="https://github.com/chihling830" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/你的LinkedInID" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <div class="section-title">About Me</div>
+        <div class="section-underline"></div>
+
+        <div class="timeline">
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>National Yang Ming Chiao Tung University (NYCU)</h3>
+              <p class="muted">M.S. Financial Engineering · 2024 – Present</p>
+              <p class="muted">Interests: quantitative finance, risk modeling, machine learning.</p>
+            </div>
+          </div>
+
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>National Chengchi University (NCCU)</h3>
+              <p class="muted">B.S. Applied Mathematics · 2020 – 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 28px;">
+          <div class="subhead">Technical Skills</div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (placeholder) -->
+    <section id="experience" class="section">
+      <div class="section-inner">
+        <div class="section-title">Professional Experience</div>
+        <div class="section-underline"></div>
+        <p class="muted">Coming soon...</p>
+      </div>
+    </section>
+
+    <!-- Projects (placeholder) -->
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <div class="section-title">Featured Projects</div>
+        <div class="section-underline"></div>
+        <p class="muted">Coming soon...</p>
+      </div>
+    </section>
+
+    <!-- Contact (placeholder) -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <div class="section-title">Contact</div>
+        <div class="section-underline"></div>
+        <p class="muted">Email: your@email.com</p>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
