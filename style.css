@@ -164,36 +164,47 @@ html {
   color: #111827;
 }
 
-/* ===== About: Timeline ===== */
+/* ===== Timeline (fixed & aligned) ===== */
 .timeline {
-  border-left: 2px solid #e5e7eb;
-  padding-left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   max-width: 900px;
 }
 
 .event {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  column-gap: 18px;
+  align-items: flex-start;
   position: relative;
-  margin-bottom: 26px;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
 }
 
 .dot {
-  position: absolute;
-  left: -10px;
-  top: 6px;
   width: 12px;
   height: 12px;
   background: #111827;
   border-radius: 50%;
+  margin-top: 6px;
+  z-index: 1;
 }
 
-.muted {
-  color: #6b7280;
+.event-content h3 {
+  font-weight: 700;
 }
 
-.subhead {
-  font-weight: 800;
-  margin-bottom: 10px;
-  font-size: 1.05rem;
+.event-content p {
+  margin-top: 4px;
 }
 
 /* ===== Tags ===== */
