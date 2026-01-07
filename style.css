@@ -268,3 +268,20 @@ html {
   margin-bottom: 10px;
   line-height: 1.5;
 }
+/* ===== Project header fix (buttons overlap) ===== */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* ❗ 改掉 baseline */
+  gap: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.project-links .btn {
+  white-space: nowrap;
+}
