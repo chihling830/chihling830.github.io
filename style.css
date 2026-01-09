@@ -324,3 +324,13 @@ html {
 .hero-card li {
   margin-bottom: 8px;
 }
+.skill-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #374151;
+}
+
+.skill-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
