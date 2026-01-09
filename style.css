@@ -296,3 +296,31 @@ html {
 .project-links .btn {
   white-space: nowrap;
 }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  background: #f9fafb;
+}
+
+.hero-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-card ul {
+  padding-left: 18px;
+  color: #374151;
+}
+
+.hero-card li {
+  margin-bottom: 8px;
+}
