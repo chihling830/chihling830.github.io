@@ -105,7 +105,7 @@ html {
 }
 
 .section {
-  padding: 90px var(--page-pad);
+  padding: 48px var(--page-pad);
 }
 
 .section-inner {
@@ -116,14 +116,14 @@ html {
 .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .section-underline {
   width: 52px;
   height: 3px;
   background: #111827;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
 }
 
 /* ===== Navbar ===== */
@@ -389,4 +389,12 @@ html {
 .footer-bottom {
   font-size: 0.85rem;
   color: #94a3b8;
+}
+/* Reduce gap between Experience and Projects */
+#experience {
+  padding-bottom: 32px;
+}
+
+#projects {
+  padding-top: 32px;
 }
