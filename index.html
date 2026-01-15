@@ -4,196 +4,131 @@
   <meta charset="UTF-8" />
   <title>Chihling Lo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-  
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-left">CL.</div>
-    <div class="nav-right">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
 
-  <div class="main">
-    <!-- Hero -->
-    <section class="hero">
-  <div class="hero-grid">
-    <div class="hero-left">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-left">CL.</div>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="hero-grid section-inner">
+    <div>
       <h1>Hello, I'm</h1>
       <h2>Chihling Lo</h2>
-
       <p>
         Master's student in Financial Engineering at National Yang Ming Chiao Tung University,
-        with interests in quantitative finance, risk modeling, and machine learning.
+        focusing on quantitative finance, risk modeling, and machine learning.
       </p>
-
       <div class="buttons">
         <a href="cv.html" class="btn primary">View CV</a>
-        <a href="mailto:irene91083@email.com" class="btn outline">Contact Me</a>
-      </div>
-
-      <div class="social">
-        <!-- GitHub / LinkedIn -->
+        <a href="mailto:irene91083@gmail.com" class="btn outline">Contact Me</a>
       </div>
     </div>
 
-    <div class="hero-right">
-      <div class="hero-card">
-        <h4>Research Focus</h4>
-        <ul>
-          <li>Employee Stock Options (ESO)</li>
-          <li>Equity-based Compensation Design</li>
-          <li>Risk Modeling & Valuation</li>
-          <li>Explainable Machine Learning</li>
-        </ul>
-      </div>
+    <div class="hero-card">
+      <h4>Research Focus</h4>
+      <ul>
+        <li>Employee Stock Options (ESO)</li>
+        <li>Equity-based Compensation Design</li>
+        <li>Risk Modeling & Valuation</li>
+        <li>Explainable Machine Learning</li>
+      </ul>
     </div>
   </div>
 </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section-inner">
-        <div class="section-title">About Me</div>
-        <div class="section-underline"></div>
+<!-- ================= About ================= -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="section-title">About Me</div>
+    <div class="section-underline"></div>
 
-        <div class="timeline">
-          <div class="event">
-            <span class="dot"></span>
-            <div>
-              <h3>National Yang Ming Chiao Tung University (NYCU)</h3>
-              <p class="muted">M.S. Financial Engineering · 2024 – Present</p>
-              <p class="muted">
-                Research interests: quantitative finance, employee stock options (ESO),
-                risk modeling, and machine learning applications in corporate finance.
-              </p>
-            </div>
-          </div>
-          <div class="event">
-            <span class="dot"></span>
-            <div>
-              <h3>National Chengchi University (NCCU)</h3>
-              <p class="muted">B.S. Applied Mathematics · 2020 – 2024</p>
-            </div>
-          </div>
-          <div class="event">
-            <span class="dot"></span>
-            <div>
-              <h3>Taichung Girls' Senior High School (TCGS)</h3>
-              <p class="muted">Science Track · 2017 – 2020</p>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top: 28px;">
-          <div class="about-block">
-            <h2 class="section-title">Quantitative & Financial Profile</h2>
-            <h3 class="subhead">Academic Training</h3>
-            <ul class="project-points">
-              <li>
-                <strong>Graduate-Level (Financial Engineering)</strong> —
-                Numerical Methods in Finance, Financial Mathematics, Futures & Options,
-                Financial Management, Real Options Analysis.
-              </li>
-              <li>
-                <strong>Undergraduate (Applied Mathematics)</strong> —
-                Calculus, Linear Algebra, Probability Theory, Mathematical Statistics,
-                Differential Equations, Numerical Analysis, Operations Research, Economics.
-              </li>
-            </ul>
-            
-            <h3 class="subhead">Technical Skills</h3>
-            
-            <ul class="project-points">
-              <li><strong>Python</strong> — data analysis, machine learning, valuation models</li>
-              <li><strong>MATLAB</strong> — numerical methods, option pricing, lattice models</li>
-              <li><strong>R</strong> — statistical analysis, econometrics</li>
-              <li><strong>SQL</strong> — financial data querying and preprocessing</li>
-              <li><strong>SAS</strong> — enterprise-scale financial and actuarial analysis</li>
-            </ul>
-    <!-- Experience -->
-    <<section id="experience" class="section">
-      <div class="section-inner">
-        <div class="section-title">Professional Experience</div>
-        <div class="section-underline"></div>
-        
-        <div class="project-card">
-          <div class="project-header">
-            <div>
-              <h3>Employee Stock Option (ESO) Valuation & Compensation Design</h3>
-              <span class="project-date">2024 – Present</span>
-            </div>
-          </div>
-
-          <p class="project-desc">
-            Conducted quantitative modeling and valuation of employee stock option (ESO)–based compensation
-            schemes, focusing on how firms optimally design equity-based incentives under accounting,
-            taxation, and risk considerations.
-          </p>
-
-          <ul class="project-points">
-            <li>
-              Built multi-period valuation models for employee stock options using lattice-based and
-              numerical methods, incorporating vesting, early exercise behavior, and employee risk aversion.
-            </li>
-            <li>
-              Evaluated the impact of different compensation mixes (ESO vs. RSU vs. cash) on firm value,
-              employee incentives, and risk-taking behavior.
-            </li>
-            <li>
-              Analyzed how accounting regulations (e.g., FAS 123R) affect firms’ stock-based compensation
-              issuance decisions and cost recognition.
-            </li>
-            <li>
-              Applied utility-based frameworks to assess employee exercise decisions and the firm’s
-              optimal compensation design under uncertainty.
-            </li>
-          </ul>
+    <div class="timeline">
+      <div class="event">
+        <span class="dot"></span>
+        <div>
+          <h3>National Yang Ming Chiao Tung University</h3>
+          <p class="muted">M.S. Financial Engineering · 2024 – Present</p>
         </div>
       </div>
-    </section>
-     <h2 class="section-title">Professional Experience</h2>
-      <div class="section-underline"></div>
-      <div class="project-card">
-        <div class="project-header">
-          <div>
-            <h3>Research & Academic Roles</h3>
-            <span class="project-date">2024 – Present</span>
-          </div>
+
+      <div class="event">
+        <span class="dot"></span>
+        <div>
+          <h3>National Chengchi University</h3>
+          <p class="muted">B.S. Applied Mathematics · 2020 – 2024</p>
         </div>
-
-        <ul class="project-points">
-          <li>
-            <strong>Research Assistant</strong> — Quantitative finance and ESO valuation research,
-            focusing on numerical modeling, compensation design, and firm decision-making.
-          </li>
-          <li>
-            <strong>Teaching Assistant, Financial Mathematics</strong> — Course support,
-            problem-solving sessions, and grading.
-          </li>
-          <li>
-            <strong>Teaching Assistant, Numerical Methods in Finance</strong> — Implementation of
-            option pricing and valuation models using MATLAB and Python.
-          </li>
-          <li>
-            <strong>Administrative Assistant</strong> — Research accounting, reimbursements,
-            and documentation.
-          </li>
-        </ul>
       </div>
+    </div>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="section-inner">
-        <div class="section-title">Featured Projects</div>
-        <div class="section-underline"></div>
+    <h2 class="section-title" style="margin-top:72px;">Quantitative & Financial Profile</h2>
+    <div class="section-underline"></div>
+
+    <h3 class="subhead">Academic Training</h3>
+    <ul class="project-points">
+      <li><strong>Graduate</strong> — Financial Mathematics, Futures & Options, Real Options Analysis</li>
+      <li><strong>Undergraduate</strong> — Calculus, Linear Algebra, Probability, Statistics</li>
+    </ul>
+
+    <h3 class="subhead">Technical Skills</h3>
+    <ul class="project-points">
+      <li><strong>Python</strong> — data analysis, machine learning, valuation models</li>
+      <li><strong>MATLAB</strong> — numerical methods, option pricing</li>
+      <li><strong>R / SQL / SAS</strong> — econometrics and financial data processing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= Experience ================= -->
+<section id="experience" class="section">
+  <div class="section-inner">
+    <div class="section-title">Professional Experience</div>
+    <div class="section-underline"></div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Employee Stock Option (ESO) Valuation & Compensation Design</h3>
+        <span class="project-date">2024 – Present</span>
+      </div>
+      <ul class="project-points">
+        <li>Built multi-period ESO valuation models using numerical and lattice-based methods</li>
+        <li>Analyzed compensation design under accounting and risk constraints</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Research & Teaching Roles</h3>
+        <span class="project-date">2019 – Present</span>
+      </div>
+      <ul class="project-points">
+        <li>Research Assistant — Quantitative finance & ESO research</li>
+        <li>Teaching Assistant — Financial Mathematics & Numerical Methods</li>
+        <li>Private Tutor — High school mathematics (4+ years)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Projects ================= -->
+<section id="projects" class="section">
+  <div class="section-inner">
+    <div class="section-title">Featured Projects</div>
+    <div class="section-underline"></div>
 
            <!-- Project 1 -->
     <div class="project-card">
