@@ -76,20 +76,20 @@ title: "Chihling Lo | Portfolio"
       </p>
     </div>
     <div class="profile-photo-container">
-      照片放置處<br>(建議 150x180)
+      ![IMG_5180 3](https://github.com/user-attachments/assets/7f14b613-6236-4230-bebd-29a266947a94)<br>(建議 150x180)
       </div>
   </div>
 
   <hr>
 
-  <h2> 教育背景</h2>
+  <h2>🎓 教育背景</h2>
   <ul>
     <li><strong>國立陽明交通大學 (NYCU)</strong> | 資訊管理與財務金融學系 財務工程碩士 | 2024 - 至今</li>
     <li><strong>國立政治大學 (NCCU)</strong> | 應用數學系 學士 | 2020 - 2024</li>
-    <li><strong>臺中市立臺中女中 (TCGS)</strong> | 高中 | 2016 - 2020</li>
+    <li><strong>臺中市立臺中女中 (TCGS)</strong> | 高中 | 2017 - 2020</li>
   </ul>
 
-  <h2> 專業技能</h2>
+  <h2>🛠 專業技能</h2>
   <ul>
     <li><strong>程式語言與工具</strong>：
       <ul>
@@ -101,9 +101,9 @@ title: "Chihling Lo | Portfolio"
     </li>
   </ul>
 
-  <h2> 深度專案經歷</h2>
+  <h2>📁 深度專案經歷</h2>
 
-  <h3>1. 員工認股選擇權 (ESO) 定價與薪酬組合最佳化研究</h3>
+  <h3>1. 員工認股權 (ESO) 定價與薪酬組合最佳化研究</h3>
   <ul>
     <li><strong>研究背景與合規性</strong>：針對企業高階主管薪酬設計議題，嚴格遵循 **FASB 123R** (Share-Based Payment) 會計公報準則進行公允價值評估。</li>
     <li><strong>模型建構與技術細節</strong>：
@@ -118,7 +118,7 @@ title: "Chihling Lo | Portfolio"
   <h3>2. 新光人壽業務員挪用資金偵測系統 (Shin-Kong-Agent-Fraud-Detection)</h3>
   <ul>
     <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub 專案頁面</a></li>
-    <li><strong>演算法實作與比較</strong>：針對保險業高度不平衡的稽核數據，實作並交叉驗證多種機器學習模型，包括 **XGBoost** 、**Random Forest** 、**SVM**  與 **Logistic Regression**。</li>
+    <li><strong>演算法實作與比較</strong>：針對保險業高度不平衡的稽核數據，實作並交叉驗證多種機器學習模型，包括 **XGBoost**、**Random Forest**、**SVM** 與 **Logistic Regression**。</li>
     <li><strong>關鍵技術挑戰</strong>：深入探討不平衡資料集 (Imbalanced Dataset) 處理策略，應用 **class-weighted MSE** 給予不同類別不同的權重，重點優化模型的召回率 (Recall)，以確保能捕捉到極少數的異常挪用行為。</li>
     <li><strong>實務價值</strong>：成功識別出具高風險的業務員資金流動模式與行為特徵，協助企業稽核部門建立自動化預警指標，強化 ESG 公司治理中的內部風險控管機制。</li>
   </ul>
@@ -135,6 +135,7 @@ title: "Chihling Lo | Portfolio"
     </li>
     <li><strong>決策支持貢獻</strong>：量化了營運靈活性所帶來的額外選擇權價值 (Option Premium)，協助管理層在進行巨額飛機採購與航網規劃時，能更動態地評估潛在風險與回報，制定更具韌性的策略。</li>
   </ul>
+
   <h3>4. 心臟病臨床決策支援系統 (Heart Disease Clinical Decision Support System)</h3>
   <ul>
     <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub 專案頁面</a></li>
@@ -143,11 +144,11 @@ title: "Chihling Lo | Portfolio"
     <li><strong>臨床應用價值</strong>：將複雜的機器學習預測結果轉化為具備臨床意義的決策支援指標，協助醫療人員快速識別高風險因子。</li>
   </ul>
 
-  <h2> 經歷與競賽</h2>
+  <h2>🏆 經歷與競賽</h2>
   <ul>
     <li><strong>教學與研究助理 (TA/RA)</strong>：
       <ul>
-        <li>擔任國立陽明交通大學 **「財務數值方法 (Numerical Methods in Finance)」** 與 **「財務數學 (Financial Mathematics」**的課程助教，協助學生理解隨機微積分推導、蒙地卡羅模擬之程式實作。</li>
+        <li>擔任國立陽明交通大學 **「財務數值方法 (Numerical Methods in Finance)」** 與 **「財務數學 (Financial Mathematics)」** 的課程助教，協助學生理解隨機微積分推導、蒙地卡羅模擬之程式實作。</li>
       </ul>
     </li>
     <li><strong>量化金融競賽</strong>：
@@ -181,13 +182,13 @@ title: "Chihling Lo | Portfolio"
 
   <hr>
 
-  <h2> Education</h2>
+  <h2>🎓 Education</h2>
   <ul>
     <li><strong>National Yang Ming Chiao Tung University (NYCU)</strong> | M.S. in Financial Engineering | 2024 - Present</li>
     <li><strong>National Chengchi University (NCCU)</strong> | B.S. in Applied Mathematics | 2020 - 2024</li>
   </ul>
 
-  <h2> Technical Skills</h2>
+  <h2>🛠 Technical Skills</h2>
   <ul>
     <li><strong>Data Mining & Algorithms</strong>：Gained in-depth understanding of the mathematical logic behind Data Mining algorithms at the graduate level in Industrial Engineering. Focused on the optimization objectives of classifiers, feature selection mechanisms, and model generalization analysis, beyond mere library application.</li>
     <li><strong>Financial Engineering Modeling</strong>：Proficient in stochastic processes and numerical methods. Capable of building option pricing models compliant with **FASB 123R** standards, utilizing **Trinomial Trees** and **Rank-Dependent Expected Utility (RDEU)** models for complex compensation and real options problems.</li>
@@ -200,7 +201,7 @@ title: "Chihling Lo | Portfolio"
     </li>
   </ul>
 
-  <h2> Detailed Project Experience</h2>
+  <h2>📁 Detailed Project Experience</h2>
 
   <h3>1. Employee Stock Option (ESO) Valuation & Compensation Optimization</h3>
   <ul>
@@ -233,16 +234,17 @@ title: "Chihling Lo | Portfolio"
       </ul>
     </li>
     <li><strong>Decision Support</strong>: Quantified the additional **Option Premium** derived from operational flexibility, enabling management to dynamically evaluate risks and rewards for major aircraft acquisitions and network planning.</li>
-    <h3>4. Heart Disease Clinical Decision Support System (CDSS)</h3>
+  </ul>
+
+  <h3>4. Heart Disease Clinical Decision Support System (CDSS)</h3>
   <ul>
     <li><strong>Project Link</strong>: <a href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub Repository</a></li>
     <li><strong>Robust Validation</strong>: Employed **Stratified 10-fold Cross-Validation** to ensure reliable model performance assessment and generalization on limited medical datasets.</li>
     <li><strong>Explainable AI (XAI)</strong>: Integrated **SHAP (Shapley Additive exPlanations)** values to interpret feature importance, overcoming the "black box" nature of complex models by providing both global and local explanations for predictions.</li>
     <li><strong>Clinical Impact</strong>: Translated quantitative risk probabilities into actionable clinical decision support metrics, enabling healthcare providers to rapidly identify critical risk factors.</li>
   </ul>
-  </ul>
 
-  <h2> Experience & Competitions</h2>
+  <h2>🏆 Experience & Competitions</h2>
   <ul>
     <li><strong>Teaching & Research Assistant (TA/RA)</strong>:
       <ul>
