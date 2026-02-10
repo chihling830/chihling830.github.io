@@ -144,8 +144,8 @@
 
     <h2> 教育背景</h2>
     <ul>
-      <li><strong>國立陽明交通大學 (NYCU)</strong> | 資訊管理與財務金融學系 財務工程碩士 | 2024 - 至今</li>
-      <li><strong>國立政治大學 (NCCU)</strong> | 應用數學系 學士 | 2020 - 2024</li>
+      <li><strong>國立陽明交通大學 (NYCU)</strong> | 資訊管理與財務金融學系 財務工程組碩士 | 2024 - 至今</li>
+      <li><strong>國立政治大學 (NCCU)</strong> | 應用數學系 學士 | 2020 - 2024</li>|在校成績PR15.9%
       <li><strong>臺中市立臺中女中 (TCGS)</strong> | 高中 | 2017 - 2020</li>
     </ul>
 
@@ -163,28 +163,31 @@
 
     <h2> 深度專案經歷</h2>
 
-    <h3>1. 員工認股權 (ESO) 定價與薪酬組合最佳化研究</h3>
+    <h3>1. 員工認股選擇權 (ESO) 定價與薪酬組合最佳化研究</h3>
     <ul>
       <li><strong>研究背景與合規性</strong>：針對企業高階主管薪酬設計議題，嚴格遵循 <strong>FASB 123R</strong> (Share-Based Payment) 會計公報準則進行公允價值評估。</li>
       <li><strong>模型建構與技術細節</strong>：
         <ul>
-          <li>採用 <strong>三元樹 (Trinomial Tree)</strong> 數值方法構建標的資產價格演化路徑。</li>
-          <li>引入 <strong>評價依賴期望效用 (RDEU, Rank-Dependent Expected Utility)</strong> 模型，突破傳統期望效用理論限制，量化員工在面對非對稱風險時的心理特徵與主觀機率權重，更真實地模擬提早行權行為。</li>
+          <li>利用 <strong>資產樹</strong> 模擬公司資產價值演化路徑。</li>
+          <li>引入 <strong>評價依賴期望效用 (RDEU, Rank-Dependent Expected Utility)</strong> 模型，改善傳統期望效用理論的偏誤，量化員工在面對非對稱風險時的心理特徵與主觀機率權重，更真實地模擬提早行權行為。</li>
         </ul>
       </li>
-      <li><strong>量化分析成果</strong>：模擬並比較 ESO、限制員工權利新股 (RSU) 與現金之不同組合在不同股價情境下的效用函數，為企業提供兼顧激勵效果、留才目標與成本控制的最佳薪酬結構建議。</li>
+      <li><strong>量化分析成果</strong>：模擬並比較 ESO、限制員工權利新股 (RSU) 與現金在會計制度改革（FASB 123R）前後，公司給員工的薪酬組合產生了什麼變化。</li>
     </ul>
 
     <h3>2. 新光人壽業務員挪用資金偵測系統</h3>
     <ul>
       <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub 專案頁面</a></li>
-      <li><strong>演算法實作與比較</strong>：針對保險業高度不平衡的稽核數據，實作並交叉驗證多種機器學習模型，包括 <strong>XGBoost</strong>、<strong>Random Forest</strong>、<strong>SVM</strong> 與 <strong>Logistic Regression</strong>。</li>
+      <li><strong>簡報連結</strong>：<a href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection/blob/main/presentation.pdf" target="_blank">GitHub 簡報頁面</a></li>
+      <li><strong>演算法實作與比較</strong>：針對保險業高度不平衡的稽核數據，實作並驗證多種機器學習模型，包括 <strong>XGBoost</strong>、<strong>Random Forest</strong>、<strong>SVM</strong> 與 <strong>Logistic Regression</strong>。</li>
       <li><strong>關鍵技術挑戰</strong>：深入探討不平衡資料集 (Imbalanced Dataset) 處理策略，應用 <strong>class-weighted MSE</strong> 給予不同類別不同的權重，重點優化模型的召回率 (Recall)，以確保能捕捉到極少數的業務員異常挪用行為。</li>
       <li><strong>實務價值</strong>：成功識別出具高風險的業務員資金流動模式與行為特徵，協助企業稽核部門建立自動化預警指標，強化 ESG 公司治理中的內部風險控管機制。</li>
     </ul>
 
     <h3>3. 星宇航空：北美航線產品轉換實質選擇權分析</h3>
     <ul>
+      <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/starlux-real-options-route-switching" target="_blank">GitHub 專案頁面</a></li>
+      <li><strong>簡報連結</strong>：<a href="https://github.com/chihling830/starlux-real-options-route-switching/blob/main/presentation.pdf" target="_blank">GitHub 簡報頁面</a></li>
       <li><strong>策略核心概念</strong>：跳脫傳統淨現值 (NPV) 法框架，將航空公司在不確定市場環境下的航線部署決策建模為一項具有管理彈性的「轉換選擇權 (Switching Option)」。</li>
       <li><strong>量化模型細節</strong>：
         <ul>
@@ -198,9 +201,10 @@
 
     <h3>4. 心臟病臨床決策支援系統 (Heart Disease CDSS)</h3>
     <ul>
-      <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub 專案頁面</a></li>
+      <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/Heart-Disease-CDSS-ML" target="_blank">GitHub 專案頁面</a></li>
+      <li><strong>簡報連結</strong>：<a href="https://github.com/chihling830/Heart-Disease-CDSS-ML/blob/main/presentation.pdf" target="_blank">GitHub 簡報頁面</a></li>
       <li><strong>模型驗證機制</strong>：採用 <strong>分層十折交叉驗證 (Stratified 10-fold Cross-Validation)</strong>，確保在醫療小樣本數據下模型評估的穩健性與泛化能力。</li>
-      <li><strong>可解釋性 AI (XAI)</strong>：導入 <strong>SHAP (Shapley Additive exPlanations)</strong> 值進行特徵重要性分析，解決黑盒子模型缺乏透明度的問題，提供全局與局部的預測解釋。</li>
+      <li><strong>可解釋性 AI (XAI)</strong>：導入 <strong>SHAP (Shapley Additive exPlanations)</strong> 值進行特徵重要性分析，提供全局與局部的預測解釋。</li>
       <li><strong>臨床應用價值</strong>：將複雜的機器學習預測結果轉化為具備臨床意義的決策支援指標，協助醫療人員快速識別高風險因子。</li>
     </ul>
 
