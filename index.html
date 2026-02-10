@@ -2,392 +2,612 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chihling Lo</title>
+  <title>Chihling Lo | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ========== 語言切換按鈕樣式 ========== */
+    .lang-switch-container {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 1px solid #e5e7eb;
+    }
+    
+    .lang-btn {
+      background: transparent;
+      border: 1px solid #d1d5db;
+      padding: 5px 12px;
+      margin: 0 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #6b7280;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      background: #f3f4f6;
+      color: #111;
+    }
+
+    .lang-btn.active {
+      background: #111827;
+      color: #ffffff;
+      border-color: #111827;
+    }
+
+    /* 用來隱藏不同語言區塊的 class */
+    .hidden {
+      display: none !important;
+    }
+
+    /* 照片樣式微調 */
+    .hero-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
   <div class="nav-left">CL.</div>
   <div class="nav-right">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    
+    <div id="nav-en" class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div id="nav-zh" class="nav-links hidden">
+      <a href="#about">關於我</a>
+      <a href="#experience">經歷</a>
+      <a href="#projects">專案</a>
+      <a href="#contact">聯絡</a>
+    </div>
+
+    <div class="lang-switch-container">
+      <button class="lang-btn" id="btn-zh" onclick="switchLanguage('zh')">中文</button>
+      <button class="lang-btn active" id="btn-en" onclick="switchLanguage('en')">EN</button>
+    </div>
   </div>
 </nav>
 
 <div class="main">
 
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <div class="hero-grid">
-    <div class="hero-left">
-      <h1>Hello, I'm</h1>
-      <h2>Chihling Lo</h2>
+  <div id="content-en">
+    
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <img src="images/profile.jpg" alt="Chihling Lo" class="hero-avatar">
+          
+          <h1>Hello, I'm</h1>
+          <h2>Chihling Lo</h2>
 
-      <p>
-        Master's student in Financial Engineering at National Yang Ming Chiao Tung University,
-        with interests in quantitative finance, risk modeling, and machine learning.
-      </p>
-
-      <div class="buttons">
-        <a href="cv.html" class="btn primary">View CV</a>
-        <a href="mailto:irene91083@email.com" class="btn outline">Contact Me</a>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="hero-card">
-        <h4>Research Focus</h4>
-        <ul>
-          <li>Employee Stock Options (ESO)</li>
-          <li>Equity-based Compensation Design</li>
-          <li>Risk Modeling & Valuation</li>
-          <li>Explainable Machine Learning</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== About ===== -->
-<section id="about" class="section">
-  <div class="section-inner">
-
-    <div class="section-title">About Me</div>
-    <div class="section-underline"></div>
-
-    <!-- ===== Timeline ===== -->
-    <div class="timeline">
-
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>National Yang Ming Chiao Tung University (NYCU)</h3>
-          <p class="muted">M.S. Financial Engineering · 2024 – Present</p>
-          <p class="muted">
-            Research interests: quantitative finance, employee stock options (ESO),
-            risk modeling, and machine learning applications in corporate finance.
+          <p>
+            Master's student in Financial Engineering at National Yang Ming Chiao Tung University,
+            specializing in quantitative finance, stochastic modeling, and machine learning applications in corporate decision-making.
           </p>
-        </div>
-      </div>
 
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>National Chengchi University (NCCU)</h3>
-          <p class="muted">B.S. Applied Mathematics · 2020 – 2024</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <span class="dot"></span>
-        <div>
-          <h3>Taichung Girls' Senior High School (TCGS)</h3>
-          <p class="muted">Science Track · 2017 – 2020</p>
-        </div>
-      </div>
-
-    </div> <!-- ✅ timeline 關在這 -->
-
-    <!-- ===== Quantitative Profile ===== -->
-    <div class="about-block">
-
-      <h2 class="section-title">Quantitative & Financial Profile</h2>
-
-      <h3 class="subhead">Academic Training</h3>
-      <ul class="project-points">
-        <li>
-          <strong>Graduate-Level (Financial Engineering)</strong> —
-          Numerical Methods in Finance, Financial Mathematics, Futures & Options,
-          Financial Management, Real Options Analysis.
-        </li>
-        <li>
-          <strong>Undergraduate (Applied Mathematics)</strong> —
-          Calculus, Linear Algebra, Probability Theory, Mathematical Statistics,
-          Differential Equations, Numerical Analysis, Operations Research, Economics.
-        </li>
-      </ul>
-
-      <h3 class="subhead">Technical Skills</h3>
-      <ul class="project-points">
-        <li><strong>Python</strong> — data analysis, machine learning, valuation models</li>
-        <li><strong>MATLAB</strong> — numerical methods, option pricing, lattice models</li>
-        <li><strong>R</strong> — statistical analysis, econometrics</li>
-        <li><strong>SQL</strong> — financial data querying and preprocessing</li>
-        <li><strong>SAS</strong> — enterprise-scale financial and actuarial analysis</li>
-      </ul>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== Experience ===== -->
-<section id="experience" class="section">
-  <div class="section-inner">
-
-    <div class="section-title">Professional Experience</div>
-    <div class="section-underline"></div>
-
-    <div class="project-card">
-      <div class="project-header">
-        <div>
-          <h3>Employee Stock Option (ESO) Valuation & Compensation Design</h3>
-          <span class="project-date">2024 – Present</span>
-        </div>
-      </div>
-
-      <p class="project-desc">
-        Conducted quantitative modeling and valuation of employee stock option (ESO)–based compensation schemes,
-        focusing on how firms optimally design equity-based incentives under accounting, taxation, and risk considerations.
-      </p>
-
-      <ul class="project-points">
-        <li>Built multi-period valuation models for employee stock options using lattice-based and numerical methods.</li>
-        <li>Evaluated the impact of different compensation mixes (ESO vs. RSU vs. cash).</li>
-        <li>Analyzed accounting regulations (e.g., FAS 123R).</li>
-        <li>Applied utility-based frameworks for optimal compensation design.</li>
-      </ul>
-    </div>
-
-    <div class="project-card">
-      <h3>Research & Academic Roles</h3>
-      <span class="project-date">2024 – Present</span>
-
-      <ul class="project-points">
-        <li><strong>Research Assistant</strong> — Quantitative finance and ESO valuation research.</li>
-        <li><strong>Teaching Assistant, Financial Mathematics</strong></li>
-        <li><strong>Teaching Assistant, Numerical Methods in Finance</strong></li>
-        <li><strong>Administrative Assistant</strong></li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- Projects / Competitions / Footer 結構已一致，CSS 即可修齊 -->
-
-<!-- ================= Projects ================= -->
-<section id="projects" class="section">
-  <div class="section-inner">
-    <div class="section-title">Featured Projects</div>
-    <div class="section-underline"></div>
-
-           <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div>
-          <h3>Insurance Agent Fund Misappropriation Detection</h3>
-          <span class="project-date">2022</span>
+          <div class="buttons">
+            <a href="cv.html" class="btn primary">View Full CV</a>
+            <a href="mailto:irene91083@gmail.com" class="btn outline">Contact Me</a>
+          </div>
         </div>
 
-        <div class="project-links">
-          <a class="btn outline"
-             href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection"
-             target="_blank">GitHub</a>
-
-          <a class="btn outline"
-             href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection/blob/main/presentation.pdf"
-             target="_blank">Slides</a>
+        <div class="hero-right">
+          <div class="hero-card">
+            <h4>Research Focus</h4>
+            <ul>
+              <li>Employee Stock Options (ESO) Valuation</li>
+              <li>Equity-based Compensation Design</li>
+              <li>Real Options & Risk Modeling</li>
+              <li>Explainable AI in Finance</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <p class="project-desc">
-        Developed an explainable machine learning system to detect potential fund misappropriation
-        behaviors among insurance agents, supporting internal control mechanisms and ESG-oriented
-        corporate governance.
-      </p>
+    <section id="about" class="section">
+      <div class="section-inner">
 
-      <div class="project-tags">
-        <span>Python</span>
-        <span>Scikit-learn</span>
-        <span>XGBoost</span>
-        <span>Imbalanced Learning</span>
-        <span>Explainable AI</span>
-        <span>ESG Risk</span>
-      </div>
+        <div class="section-title">About Me</div>
+        <div class="section-underline"></div>
 
-      <ul class="project-points">
-        <li>Built classification models on extremely imbalanced data (&lt;1% fraud rate), prioritizing recall.</li>
-        <li>Conducted comprehensive data preprocessing and feature engineering on transactional behaviors.</li>
-        <li>Applied feature importance analysis to identify key risk indicators.</li>
-        <li>Designed a deployable multi-level audit mechanism for internal control systems.</li>
-      </ul>
-    </div>
-            <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div>
-          <h3>STARLUX North America Route Switching: A Real Options Analysis</h3>
-          <span class="project-date">2024</span>
+        <div class="timeline">
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>National Yang Ming Chiao Tung University (NYCU)</h3>
+              <p class="muted">M.S. in Financial Engineering · 2024 – Present</p>
+              <p class="muted">
+                Focused on numerical methods, stochastic calculus, and option pricing.
+              </p>
+            </div>
+          </div>
+
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>National Chengchi University (NCCU)</h3>
+              <p class="muted">B.S. in Applied Mathematics · 2020 – 2024</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="about-block">
+          <h2 class="section-title">Quantitative & Financial Profile</h2>
+
+          <h3 class="subhead">Academic Training</h3>
+          <ul class="project-points">
+            <li><strong>Graduate-Level</strong>: Numerical Methods in Finance, Financial Mathematics (Stochastic Calculus), Futures & Options, Real Options Analysis.</li>
+            <li><strong>Data Mining</strong>: Studied the mathematical logic behind algorithms (Industrial Engineering Dept.), focusing on optimization objectives and model generalization rather than just API usage.</li>
+          </ul>
+
+          <h3 class="subhead">Technical Skills</h3>
+          <ul class="project-points">
+            <li><strong>Python</strong> — Pandas, Scikit-learn, XGBoost, SHAP</li>
+            <li><strong>MATLAB</strong> — Numerical methods, Finite Difference, Monte Carlo</li>
+            <li><strong>R / SAS</strong> — Statistical analysis and data processing</li>
+            <li><strong>Modeling</strong> — Trinomial Trees, FASB 123R Compliance, RDEU Models</li>
+          </ul>
         </div>
-
-        <div class="project-links">
-          <a class="btn outline"
-             href="https://github.com/chihling830/starlux-real-options-route-switching"
-             target="_blank">GitHub</a>
-
-          <a class="btn outline"
-             href="https://github.com/chihling830/starlux-real-options-route-switching/blob/main/presentation.pdf"
-             target="_blank">Slides</a>
-        </div>
-      </div>
-
-      <p class="project-desc">
-        Conducted a real options–based valuation of route switching flexibility for STARLUX Airlines’
-        North America operations, assessing the strategic value of operational flexibility under
-        demand uncertainty.
-      </p>
-
-      <div class="project-tags">
-        <span>Real Options</span>
-        <span>Corporate Finance</span>
-        <span>Airline Economics</span>
-        <span>Risk Analysis</span>
-        <span>Strategic Flexibility</span>
-      </div>
-
-      <ul class="project-points">
-        <li>Modeled route switching decisions as real options under uncertain passenger demand.</li>
-        <li>Estimated the value of operational flexibility versus static route strategies.</li>
-        <li>Conducted scenario analysis to evaluate downside risk and upside potential.</li>
-        <li>Provided managerial insights for airline route planning and strategic decisions.</li>
-      </ul>
-    </div>
-          <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-header">
-        <div>
-          <h3>Heart Disease Clinical Decision Support System (CDSS)</h3>
-          <span class="project-date">2025</span>
-        </div>
-
-        <div class="project-links">
-          <a class="btn outline"
-             href="https://github.com/chihling830/heart-disease-cdss"
-             target="_blank">GitHub</a>
-
-          <a class="btn outline"
-             href="https://github.com/chihling830/Heart-Disease-CDSS-ML/blob/main/presentation.pdf"
-             target="_blank">Slides</a>
-        </div>
-      </div>
-
-      <p class="project-desc">
-        Developed an explainable machine learning–based Clinical Decision Support System (CDSS)
-        for heart disease risk prediction, emphasizing feature importance and SHAP-based
-        interpretability.
-      </p>
-
-      <div class="project-tags">
-        <span>Python</span>
-        <span>Scikit-learn</span>
-        <span>XGBoost</span>
-        <span>SHAP</span>
-        <span>Explainable AI</span>
-        <span>Healthcare ML</span>
-        <span>CDSS</span>
-      </div>
-
-      <ul class="project-points">
-        <li>Evaluated multiple models using stratified 10-fold cross-validation.</li>
-        <li>Performed feature importance analysis across linear and tree-based models.</li>
-        <li>Applied SHAP for global and individual-level explainability.</li>
-        <li>Translated explanations into CDSS-style clinical decision support insights.</li>
-      </ul>
-    </div>
 
       </div>
     </section>
 
-<section id="competitions" class="section">
-  <div class="section-inner">
-    <div class="section-title">Competitions & Quantitative Trading Experience</div>
-    <div class="section-underline"></div>
-    <div class="project-card">
-  <div class="project-header">
-    <div>
-      <h3>WorldQuant BRAIN Global Quantitative Trading Competition</h3>
-      <span class="project-date">2024 – 2025</span>
-    </div>
-  </div>
+    <section id="experience" class="section">
+      <div class="section-inner">
 
-  <p class="project-desc">
-    Participated in the WorldQuant BRAIN global quantitative trading competition,
-    focusing on alpha research, factor construction, and systematic strategy evaluation
-    using historical financial data.
-  </p>
+        <div class="section-title">Professional Experience</div>
+        <div class="section-underline"></div>
 
-  <ul class="project-points">
-    <li>Constructed predictive alpha signals using predefined operators and financial time-series data.</li>
-    <li>Evaluated strategies under strict constraints on turnover, drawdown, and risk-adjusted returns.</li>
-    <li>Gained hands-on experience with professional quantitative research workflows and platforms.</li>
-    <li>Developed practical understanding of how AI/ML techniques are applied in systematic trading.</li>
-  </ul>
-</div>
-    <div class="project-card">
-  <div class="project-header">
-    <div>
-      <h3>TAIFEX Quantitative Futures Trading Competition</h3>
-      <span class="project-date">2024</span>
-    </div>
-  </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>Employee Stock Option (ESO) Valuation & Compensation Design</h3>
+              <span class="project-date">2024 – Present</span>
+            </div>
+          </div>
 
-  <p class="project-desc">
-    Participated in a quantitative futures trading competition organized by the
-    Taiwan Futures Exchange (TAIFEX), applying systematic trading strategies
-    under simulated market conditions.
-  </p>
+          <p class="project-desc">
+            Conducted fair value assessment for executive compensation in strict compliance with <strong>FASB 123R</strong> accounting standards.
+          </p>
 
-  <ul class="project-points">
-    <li>Designed futures trading strategies using rule-based and quantitative approaches.</li>
-    <li>Evaluated performance using total profit and risk-adjusted metrics such as the Sharpe ratio.</li>
-    <li>Applied position sizing and risk control techniques to manage downside risk.</li>
-    <li>Strengthened practical understanding of derivatives markets and futures trading mechanisms.</li>
-  </ul>
-</div>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <h2>Get In Touch</h2>
-      <div class="footer-underline"></div>
-
-      <p class="footer-text">
-        I'm currently looking for research and quantitative finance opportunities.
-        Whether you have a question or just want to say hi, feel free to reach out.
-      </p>
-
-      <div class="footer-contact">
-        <div class="contact-item">
-          <i class="fa-solid fa-envelope"></i>
-          <span>irene91083@gmail.com</span>
+          <ul class="project-points">
+            <li><strong>Modeling</strong>: Constructed asset price paths using <strong>Trinomial Tree</strong> numerical methods for better convergence than binomial models.</li>
+            <li><strong>Behavioral Finance</strong>: Integrated the <strong>Rank-Dependent Expected Utility (RDEU)</strong> model to quantify employees' psychological risk preferences and simulate early exercise behavior accurately.</li>
+            <li><strong>Optimization</strong>: Simulated utility functions of various compensation mixes (ESO, RSU, Cash) to recommend optimal structures balancing retention and cost.</li>
+          </ul>
         </div>
-        
+
+        <div class="project-card">
+          <h3>Teaching & Research Roles</h3>
+          <span class="project-date">2024 – Present</span>
+
+          <ul class="project-points">
+            <li><strong>Teaching Assistant</strong> for "Numerical Methods in Finance" & "Financial Mathematics". Assisted students with stochastic calculus derivations and Monte Carlo implementations.</li>
+            <li><strong>Research Assistant</strong> focusing on quantitative finance and derivative pricing models.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <div class="section-title">Featured Projects</div>
+        <div class="section-underline"></div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>Insurance Agent Fund Misappropriation Detection</h3>
+              <span class="project-date">2022</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Developed a fraud detection system for Shin Kong Life Insurance using machine learning on highly imbalanced audit data.
+          </p>
+
+          <div class="project-tags">
+            <span>XGBoost</span> <span>Random Forest</span> <span>SVM</span> <span>Imbalanced Learning</span>
+          </div>
+
+          <ul class="project-points">
+            <li>Implemented and cross-validated <strong>XGBoost, Random Forest, SVM, and Logistic Regression</strong>.</li>
+            <li>Addressed data imbalance using <strong>class-weighted MSE</strong> and threshold tuning to prioritize <strong>Recall</strong>.</li>
+            <li>Identified high-risk patterns to support automated early warning indicators for ESG risk control.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>STARLUX Airlines: Real Options Analysis</h3>
+              <span class="project-date">2024</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/starlux-real-options-route-switching" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Modeled route deployment decisions as a flexible <strong>"Switching Option"</strong> under market uncertainty.
+          </p>
+
+          <div class="project-tags">
+            <span>Real Options</span> <span>GBM Simulation</span> <span>Strategic Flexibility</span>
+          </div>
+
+          <ul class="project-points">
+            <li>Simulated demand paths for "Taipei-LA" vs. "Taipei-Vancouver" using <strong>Geometric Brownian Motion (GBM)</strong>.</li>
+            <li>Calculated optimal switching timing based on load factors and yield levels.</li>
+            <li>Quantified the <strong>Option Premium</strong> of operational flexibility to support fleet planning decisions.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>Heart Disease Clinical Decision Support System (CDSS)</h3>
+              <span class="project-date">2025</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Built an explainable AI system for medical risk prediction.
+          </p>
+
+          <div class="project-tags">
+            <span>Python</span> <span>SHAP</span> <span>Cross-Validation</span>
+          </div>
+
+          <ul class="project-points">
+            <li>Employed <strong>Stratified 10-fold Cross-Validation</strong> for robust performance on small medical datasets.</li>
+            <li>Integrated <strong>SHAP values</strong> to interpret feature importance, providing white-box explanations for black-box models.</li>
+            <li>Translated risk probabilities into actionable clinical decision support metrics.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-title">Competitions</div>
+        <div class="section-underline"></div>
+
+        <div class="project-card">
+          <h3>WorldQuant BRAIN Global Quantitative Trading Competition</h3>
+          <p class="project-desc">Constructed predictive Alpha factors using global financial data, optimizing for turnover and Sharpe ratio constraints.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>TAIFEX Quantitative Futures Trading Competition</h3>
+          <p class="project-desc">Developed rule-based automated futures strategies, applying position sizing and risk control logic.</p>
+        </div>
+      </div>
+    </section>
+
+  </div> <div id="content-zh" class="hidden">
+    
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <img src="images/profile.jpg" alt="羅芷羚" class="hero-avatar">
+
+          <h1>你好，我是</h1>
+          <h2>羅芷羚 (Chihling Lo)</h2>
+
+          <p>
+            國立陽明交通大學財務工程碩士生，專注於量化金融、隨機模型與機器學習在企業決策中的應用。
+            具備紮實的應用數學背景與演算法邏輯能力。
+          </p>
+
+          <div class="buttons">
+            <a href="cv.html" class="btn primary">查看完整履歷</a>
+            <a href="mailto:irene91083@gmail.com" class="btn outline">聯絡我</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <h4>研究領域</h4>
+            <ul>
+              <li>員工認股選擇權 (ESO) 評價</li>
+              <li>股權薪酬設計與最佳化</li>
+              <li>實質選擇權與風險建模</li>
+              <li>可解釋性 AI (XAI) 金融應用</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-inner">
+
+        <div class="section-title">關於我</div>
+        <div class="section-underline"></div>
+
+        <div class="timeline">
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>國立陽明交通大學 (NYCU)</h3>
+              <p class="muted">財務工程碩士 (資訊管理與財務金融學系) · 2024 – 至今</p>
+              <p class="muted">
+                主修：數值金融、隨機微積分、金融管理、實質選擇權分析。
+              </p>
+            </div>
+          </div>
+
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>國立政治大學 (NCCU)</h3>
+              <p class="muted">應用數學系 學士 · 2020 – 2024</p>
+            </div>
+          </div>
+
+          <div class="event">
+            <span class="dot"></span>
+            <div>
+              <h3>臺中市立臺中女中 (TCGS)</h3>
+              <p class="muted">2017 – 2020</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="about-block">
+          <h2 class="section-title">專業技能</h2>
+
+          <h3 class="subhead">學術訓練</h3>
+          <ul class="project-points">
+            <li><strong>研究所 (財務工程)</strong>: 財務數值方法、金融數學 (隨機微積分)、期貨與選擇權、實質選擇權分析。</li>
+            <li><strong>數據挖掘 (Data Mining)</strong>: 於工工所修習，深入研究演算法背後的數學邏輯（目標函數優化、特徵選擇機制），而非僅流於套件應用。</li>
+          </ul>
+
+          <h3 class="subhead">技術能力</h3>
+          <ul class="project-points">
+            <li><strong>Python</strong> — Pandas 資料清洗, Scikit-learn, XGBoost, SHAP 解釋性分析。</li>
+            <li><strong>MATLAB</strong> — 財務數值方法實作 (有限差分法、蒙地卡羅模擬)。</li>
+            <li><strong>R / SAS</strong> — 統計檢定、計量經濟分析、資料庫處理。</li>
+            <li><strong>金融建模</strong> — 三元樹 (Trinomial Trees), FASB 123R 合規評價, RDEU 模型。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-inner">
+
+        <div class="section-title">專業經歷</div>
+        <div class="section-underline"></div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>員工認股權 (ESO) 定價與薪酬組合最佳化研究</h3>
+              <span class="project-date">2024 – 至今</span>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            依循 <strong>FASB 123R</strong> 會計準則，針對高階主管薪酬設計進行公允價值評估與最佳化分析。
+          </p>
+
+          <ul class="project-points">
+            <li><strong>模型建構</strong>: 採用 <strong>三元樹 (Trinomial Tree)</strong> 數值方法構建資產價格路徑，提升收斂速度。</li>
+            <li><strong>行為金融</strong>: 引入 <strong>評價依賴期望效用 (RDEU)</strong> 模型，量化員工在非對稱風險下的心理特徵，精確模擬提早行權行為。</li>
+            <li><strong>量化分析</strong>: 模擬 ESO、RSU 與現金之不同組合的效用函數，為企業提供兼顧激勵與成本的最佳薪酬結構建議。</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h3>教學與研究助理 (TA/RA)</h3>
+          <span class="project-date">2024 – 至今</span>
+
+          <ul class="project-points">
+            <li>擔任國立陽明交通大學 <strong>「財務數值方法」</strong> 與 <strong>「財務數學」</strong> 課程助教。</li>
+            <li>協助學生推導隨機微分方程，並輔導蒙地卡羅模擬與有限差分法之程式實作。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <div class="section-title">精選專案</div>
+        <div class="section-underline"></div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>新光人壽：業務員挪用資金偵測系統</h3>
+              <span class="project-date">2022</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            針對保險業高度不平衡的稽核數據，開發具備可解釋性的機器學習偵測模型。
+          </p>
+
+          <div class="project-tags">
+            <span>XGBoost</span> <span>Random Forest</span> <span>SVM</span> <span>不平衡數據處理</span>
+          </div>
+
+          <ul class="project-points">
+            <li>實作並交叉驗證 <strong>XGBoost, Random Forest, SVM 與 Logistic Regression</strong> 模型。</li>
+            <li>針對不平衡資料 (Imbalanced Dataset) 應用 <strong>class-weighted MSE</strong> 給予不同權重，重點優化 <strong>Recall (召回率)</strong>。</li>
+            <li>成功識別高風險資金流動模式，協助建立自動化預警指標以強化 ESG 風控。</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>星宇航空：北美航線產品轉換實質選擇權分析</h3>
+              <span class="project-date">2024</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/starlux-real-options-route-switching" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            跳脫傳統 NPV 框架，將航線部署決策建模為具有彈性的 <strong>「轉換選擇權 (Switching Option)」</strong>。
+          </p>
+
+          <div class="project-tags">
+            <span>實質選擇權</span> <span>幾何布朗運動</span> <span>策略彈性</span>
+          </div>
+
+          <ul class="project-points">
+            <li>利用 <strong>幾何布朗運動 (GBM)</strong> 模擬「台北-洛杉磯」與「台北-溫哥華」的需求路徑。</li>
+            <li>計算在不同載客率與票價門檻下，執行航線轉換的最佳時機。</li>
+            <li>量化營運靈活性帶來的 <strong>額外選擇權價值 (Option Premium)</strong>，支援機隊規劃決策。</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div>
+              <h3>心臟病臨床決策支援系統 (CDSS)</h3>
+              <span class="project-date">2025</span>
+            </div>
+            <div class="project-links">
+              <a class="btn outline" href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            開發基於機器學習的醫療決策支援系統，強調模型的可解釋性與穩健性。
+          </p>
+
+          <div class="project-tags">
+            <span>Python</span> <span>SHAP</span> <span>分層交叉驗證</span>
+          </div>
+
+          <ul class="project-points">
+            <li>採用 <strong>分層十折交叉驗證 (Stratified 10-fold CV)</strong>，確保在醫療小樣本數據下的評估穩健性。</li>
+            <li>導入 <strong>SHAP 值</strong> 進行特徵重要性分析，解決黑盒子模型缺乏透明度的問題。</li>
+            <li>將複雜的預測機率轉化為具備臨床意義的風險指標。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-title">競賽經歷</div>
+        <div class="section-underline"></div>
+
+        <div class="project-card">
+          <h3>WorldQuant BRAIN 全球量化交易競賽</h3>
+          <p class="project-desc">利用全球金融市場數據建構具統計顯著性的 Alpha 因子，並在嚴格的週轉率與風險參數限制下優化投資組合。</p>
+        </div>
+
+        <div class="project-card">
+          <h3>期交所 (TAIFEX) 量化交易競賽</h3>
+          <p class="project-desc">開發基於規則的自動化期貨交易策略，結合技術指標與計量模型，專注於提升 Sharpe Ratio (夏普比率)。</p>
+        </div>
+      </div>
+    </section>
+
+  </div> </div> <footer class="site-footer">
+  <div class="footer-inner">
+    <h2>Get In Touch</h2>
+    <div class="footer-underline"></div>
+
+    <p class="footer-text">
+      I'm currently looking for research and quantitative finance opportunities.<br>
+      目前正在尋找量化研究與金融工程相關機會，歡迎聯繫。
+    </p>
+
+    <div class="footer-contact">
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>irene91083@gmail.com</span>
+      </div>
       <div class="contact-item">
         <i class="fa-solid fa-phone"></i>
         <span>0905-111-130</span>
       </div>
-
-        <div class="contact-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Taiwan</span>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        © 2025 Chihling Lo. All rights reserved.
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Taiwan</span>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-bottom">
+      © 2025 Chihling Lo. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchLanguage(lang) {
+    const contentEn = document.getElementById('content-en');
+    const contentZh = document.getElementById('content-zh');
+    const navEn = document.getElementById('nav-en');
+    const navZh = document.getElementById('nav-zh');
+    const btnEn = document.getElementById('btn-en');
+    const btnZh = document.getElementById('btn-zh');
+
+    if (lang === 'zh') {
+      contentEn.classList.add('hidden');
+      contentZh.classList.remove('hidden');
+      navEn.classList.add('hidden');
+      navZh.classList.remove('hidden');
+      btnEn.classList.remove('active');
+      btnZh.classList.add('active');
+    } else {
+      contentZh.classList.add('hidden');
+      contentEn.classList.remove('hidden');
+      navZh.classList.add('hidden');
+      navEn.classList.remove('hidden');
+      btnZh.classList.remove('active');
+      btnEn.classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
