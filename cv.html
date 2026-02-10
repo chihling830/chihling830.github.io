@@ -1,129 +1,282 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Chihling Lo | CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Inter, system-ui, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-      margin: 0;
-      padding: 3rem 8%;
-    }
+---
+layout: home
+title: "Chihling Lo | Portfolio"
+---
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+<style>
+  /* 按鈕樣式 */
+  .lang-btn {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid #111827;
+    background: white;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: 0.3s;
+  }
+  .lang-btn.active {
+    background: #111827;
+    color: white;
+  }
+  /* 語言區塊隱藏控制 */
+  .content-en { display: none; }
 
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3rem;
-    }
+  /* 頭部雙欄排版 (照片 + 資訊) */
+  .header-section {
+    display: flex;
+    align-items: flex-start; /* 頂部對齊 */
+    gap: 2rem; /* 照片與文字間距 */
+    margin-bottom: 2rem;
+  }
+  .header-info {
+    flex: 1; /* 資訊區塊佔據剩餘空間 */
+  }
+  .profile-photo-container {
+    flex-shrink: 0; /* 防止照片區塊被壓縮 */
+    width: 150px;
+    height: 180px;
+    background-color: #f3f4f6; /* 灰色佔位背景 */
+    border: 2px dashed #d1d5db; /* 虛線邊框表示佔位 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+    font-weight: 500;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  /* 實際放入照片後，請移除上面的 background-color 等樣式，改用這行 */
+  /* .profile-photo { width: 100%; height: 100%; object-fit: cover; } */
 
-    h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
+  /* 針對小螢幕的調整 */
+  @media (max-width: 600px) {
+    .header-section { flex-direction: column-reverse; align-items: center; text-align: center; }
+    .header-info { width: 100%; }
+  }
+</style>
 
-    .subtitle {
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
+<div style="margin-bottom: 20px;">
+  <button id="btn-zh" class="lang-btn active" onclick="showLang('zh')">中文 Resume</button>
+  <button id="btn-en" class="lang-btn" onclick="showLang('en')">English Resume</button>
+</div>
 
-    ul {
-      padding-left: 1.2rem;
-    }
+<div id="content-zh" class="content-zh">
 
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .back {
-      margin-top: 3rem;
-    }
-
-    .back a {
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: 600;
-    }
-  </style>
-</head>
-
-<body>
-
-  <h1>Chihling Lo</h1>
-  <div class="subtitle">
-    Master's Student in Financial Engineering · Quantitative Finance · Risk Modeling · Machine Learning
+  <div class="header-section">
+    <div class="header-info">
+      <h1 style="margin-top: 0;">羅芷羚 Chihling Lo</h1>
+      <p>
+        <a href="https://chihling830.github.io/">個人網站 (Portfolio)</a> | 
+        <a href="https://github.com/chihling830">GitHub</a><br>
+        Email: <a href="mailto:irene91083@gmail.com">irene91083@gmail.com</a> | Phone: 0905-111-130
+      </p>
+      <p>
+        目前就讀於國立陽明交通大學財務金融研究所，專注於財務工程、量化分析與機器學習應用。具備紮實的應用數學背景，致力於將複雜的數值方法與演算法邏輯應用於金融商品定價、風險管理與企業決策分析。
+      </p>
+    </div>
+    <div class="profile-photo-container">
+      ![IMG_5180 3](https://github.com/user-attachments/assets/7f14b613-6236-4230-bebd-29a266947a94)<br>(建議 150x180)
+      </div>
   </div>
 
-  <h2>Education</h2>
+  <hr>
+
+  <h2> 教育背景</h2>
   <ul>
-    <li>
-      <strong>National Yang Ming Chiao Tung University (NYCU)</strong><br>
-      M.S. in Financial Engineering, 2024 – Present
-    </li>
-    <li>
-      <strong>National Chengchi University (NCCU)</strong><br>
-      B.S. in Applied Mathematics, 2020 – 2024
-    </li>
+    <li><strong>國立陽明交通大學 (NYCU)</strong> | 資訊管理與財務金融學系 財務工程碩士 | 2024 - 至今</li>
+    <li><strong>國立政治大學 (NCCU)</strong> | 應用數學系 學士 | 2020 - 2024</li>
+    <li><strong>臺中市立臺中女中 (TCGS)</strong> | 高中 | 2017 - 2020</li>
   </ul>
 
-  <h2>Research Interests</h2>
+  <h2> 專業技能</h2>
   <ul>
-    <li>Employee Stock Options and Executive Compensation</li>
-    <li>Structural Credit Risk Models</li>
-    <li>Quantitative Risk Modeling</li>
-    <li>Machine Learning for Financial Applications</li>
-  </ul>
-
-  <h2>Technical Skills</h2>
-
-  <h3>Mathematics & Statistics</h3>
-  <ul>
-    <li>Advanced Calculus, Differential Equations, Numerical Analysis</li>
-    <li>Probability Theory, Mathematical Statistics, Optimization</li>
-  </ul>
-
-  <h3>Financial Engineering</h3>
-  <ul>
-    <li>Financial Mathematics, Stochastic Calculus</li>
-    <li>Derivatives Pricing, Econometrics</li>
-    <li>Numerical Methods in Finance</li>
-  </ul>
-
-  <h3>Programming</h3>
-  <ul>
-    <li>Python, MATLAB, R, SAS</li>
-  </ul>
-
-  <h2>Research Projects</h2>
-
-  <h3>Insurance Sales Agent Misuse Detection (2023)</h3>
-  <ul>
-    <li>
-      Built a machine learning pipeline to identify abnormal sales agent behavior using
-      real-world insurance datasets.
-    </li>
-    <li>
-      Extracted behavioral and transaction features to detect potential fund misappropriation.
-    </li>
-    <li>
-      Findings contributed to the design of internal audit and monitoring strategies.
+    <li><strong>程式語言與工具</strong>：
+      <ul>
+        <li><strong>Python</strong>: 熟練運用 Pandas 進行數據清洗，使用 Scikit-learn 與 XGBoost 進行機器學習建模與參數調優。</li>
+        <li><strong>MATLAB</strong>: 用於實作財務數值方法，如有限差分法與蒙地卡羅模擬。</li>
+        <li><strong>其他</strong>: R 語言統計分析、SAS 數據處理、SQL 資料庫管理。</li>
+        <li><strong>演算法與數據挖掘 (Data Mining)</strong>：於工工系研究所課程中，深入研習演算法背後的數學邏輯與推導，包含各類分類器之優化目標函數、特徵選擇機制與模型泛化能力分析，而非僅流於套件應用。</li>
+      </ul>
     </li>
   </ul>
 
-  <div class="back">
-    <a href="index.html">← Back to Home</a>
+  <h2> 深度專案經歷</h2>
+
+  <h3>1. 員工認股權 (ESO) 定價與薪酬組合最佳化研究</h3>
+  <ul>
+    <li><strong>研究背景與合規性</strong>：針對企業高階主管薪酬設計議題，嚴格遵循 **FASB 123R** (Share-Based Payment) 會計公報準則進行公允價值評估。</li>
+    <li><strong>模型建構與技術細節</strong>：
+      <ul>
+        <li>採用 **三元樹 (Trinomial Tree)** 數值方法構建標的資產價格演化路徑。</li>
+        <li>引入 **評價依賴期望效用 (RDEU, Rank-Dependent Expected Utility)** 模型，突破傳統期望效用理論限制，量化員工在面對非對稱風險時的心理特徵與主觀機率權重，更真實地模擬提早行權行為。</li>
+      </ul>
+    </li>
+    <li><strong>量化分析成果</strong>：模擬並比較 ESO、限制員工權利新股 (RSU) 與現金之不同組合在不同股價情境下的效用函數，為企業提供兼顧激勵效果、留才目標與成本控制的最佳薪酬結構建議。</li>
+  </ul>
+
+  <h3>2. 新光人壽業務員挪用資金偵測系統 (Shin-Kong-Agent-Fraud-Detection)</h3>
+  <ul>
+    <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub 專案頁面</a></li>
+    <li><strong>演算法實作與比較</strong>：針對保險業高度不平衡的稽核數據，實作並交叉驗證多種機器學習模型，包括 **XGBoost**、**Random Forest**、**SVM** 與 **Logistic Regression**。</li>
+    <li><strong>關鍵技術挑戰</strong>：深入探討不平衡資料集 (Imbalanced Dataset) 處理策略，應用 **class-weighted MSE** 給予不同類別不同的權重，重點優化模型的召回率 (Recall)，以確保能捕捉到極少數的異常挪用行為。</li>
+    <li><strong>實務價值</strong>：成功識別出具高風險的業務員資金流動模式與行為特徵，協助企業稽核部門建立自動化預警指標，強化 ESG 公司治理中的內部風險控管機制。</li>
+  </ul>
+
+  <h3>3. 星宇航空：北美航線產品轉換實質選擇權分析 (Real Options Analysis)</h3>
+  <ul>
+    <li><strong>策略核心概念</strong>：跳脫傳統淨現值 (NPV) 法框架，將航空公司在不確定市場環境下的航線部署決策建模為一項具有管理彈性的「轉換選擇權 (Switching Option)」。</li>
+    <li><strong>量化模型細節</strong>：
+      <ul>
+        <li>設定基礎場景為營運「台北-洛杉磯」航線，並持有轉換至「台北-溫哥華」航線的權利。</li>
+        <li>模擬兩條航線未來的客運需求路徑分析成本與收入。</li>
+        <li>計算在不同時間點與市場狀態（如載客率門檻、票價水平）下，執行航線轉換與機隊重配置所需的一次性轉換成本與預期未來現金流增量。</li>
+      </ul>
+    </li>
+    <li><strong>決策支持貢獻</strong>：量化了營運靈活性所帶來的額外選擇權價值 (Option Premium)，協助管理層在進行巨額飛機採購與航網規劃時，能更動態地評估潛在風險與回報，制定更具韌性的策略。</li>
+  </ul>
+
+  <h3>4. 心臟病臨床決策支援系統 (Heart Disease Clinical Decision Support System)</h3>
+  <ul>
+    <li><strong>專案連結</strong>：<a href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub 專案頁面</a></li>
+    <li><strong>模型驗證機制</strong>：採用 **分層十折交叉驗證 (Stratified 10-fold Cross-Validation)**，確保在醫療小樣本數據下模型評估的穩健性與泛化能力。</li>
+    <li><strong>可解釋性 AI (XAI)</strong>：導入 **SHAP (Shapley Additive exPlanations)** 值進行特徵重要性分析，解決黑盒子模型缺乏透明度的問題，提供全局與局部的預測解釋。</li>
+    <li><strong>臨床應用價值</strong>：將複雜的機器學習預測結果轉化為具備臨床意義的決策支援指標，協助醫療人員快速識別高風險因子。</li>
+  </ul>
+
+  <h2> 經歷與競賽</h2>
+  <ul>
+    <li><strong>教學與研究助理 (TA/RA)</strong>：
+      <ul>
+        <li>擔任國立陽明交通大學 **「財務數值方法 (Numerical Methods in Finance)」** 與 **「財務數學 (Financial Mathematics)」** 的課程助教，協助學生理解隨機微積分推導、蒙地卡羅模擬之程式實作。</li>
+      </ul>
+    </li>
+    <li><strong>量化金融競賽</strong>：
+      <ul>
+        <li>**WorldQuant BRAIN 全球量化交易競賽**：利用全球金融市場數據，建構具有統計顯著性與預測力的 Alpha 因子，並在嚴格的週轉率與風險參數限制下優化投資組合績效。</li>
+        <li>**期交所 (TAIFEX) 量化交易競賽**：開發基於規則的自動化期貨交易策略，結合技術指標與計量模型進行回測分析，專注於提升策略的風險調整後報酬 (Sharpe Ratio)。</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div id="content-en" class="content-en">
+
+  <div class="header-section">
+    <div class="header-info">
+      <h1 style="margin-top: 0;">Chihling Lo</h1>
+      <p>
+        <a href="https://chihling830.github.io/">Portfolio Website</a> | 
+        <a href="https://github.com/chihling830">GitHub</a><br>
+        Email: <a href="mailto:irene91083@gmail.com">irene91083@gmail.com</a> | Phone: 0905-111-130
+      </p>
+      <p>
+        Currently pursuing an M.S. in Financial Engineering at NYCU, with a strong foundation in applied mathematics. Specializes in quantitative analysis, stochastic modeling, and applying machine learning algorithms to financial pricing, risk management, and corporate decision-making.
+      </p>
+    </div>
+    <div class="profile-photo-container">
+      Photo Placeholder<br>(150x180 recommended)
+      </div>
   </div>
 
-</body>
-</html>
+  <hr>
+
+  <h2> Education</h2>
+  <ul>
+    <li><strong>National Yang Ming Chiao Tung University (NYCU)</strong> | M.S. in Financial Engineering | 2024 - Present</li>
+    <li><strong>National Chengchi University (NCCU)</strong> | B.S. in Applied Mathematics | 2020 - 2024</li>
+  </ul>
+
+  <h2> Technical Skills</h2>
+  <ul>
+    <li><strong>Data Mining & Algorithms</strong>：Gained in-depth understanding of the mathematical logic behind Data Mining algorithms at the graduate level in Industrial Engineering. Focused on the optimization objectives of classifiers, feature selection mechanisms, and model generalization analysis, beyond mere library application.</li>
+    <li><strong>Financial Engineering Modeling</strong>：Proficient in stochastic processes and numerical methods. Capable of building option pricing models compliant with **FASB 123R** standards, utilizing **Trinomial Trees** and **Rank-Dependent Expected Utility (RDEU)** models for complex compensation and real options problems.</li>
+    <li><strong>Programming & Tools</strong>：
+      <ul>
+        <li><strong>Python</strong>: Experienced in data cleaning with Pandas, and machine learning modeling/tuning using Scikit-learn and XGBoost.</li>
+        <li><strong>MATLAB</strong>: Implementing financial numerical methods such as finite difference and Monte Carlo simulations.</li>
+        <li><strong>Others</strong>: R for statistical analysis, SAS for data processing, SQL for database management.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2> Detailed Project Experience</h2>
+
+  <h3>1. Employee Stock Option (ESO) Valuation & Compensation Optimization</h3>
+  <ul>
+    <li><strong>Regulatory Framework</strong>: Conducted fair value assessment for executive compensation in strict compliance with **FASB 123R** (Share-Based Payment) accounting standards.</li>
+    <li><strong>Modeling Techniques</strong>:
+      <ul>
+        <li>Constructed underlying asset price paths using the **Trinomial Tree** numerical method for improved convergence and accuracy over binomial models.</li>
+        <li>Integrated the **Rank-Dependent Expected Utility (RDEU)** model to capture employees' psychological characteristics and subjective probability weighting under asymmetric risk, providing a more realistic simulation of early exercise behavior compared to traditional expected utility theory.</li>
+      </ul>
+    </li>
+    <li><strong>Quantitative Analysis</strong>: Simulated and compared the utility functions of various combinations of ESOs, Restricted Stock Units (RSUs), and cash under different stock price scenarios to recommend optimal compensation structures balancing incentives, retention, and cost.</li>
+  </ul>
+
+  <h3>2. Shin-Kong Insurance Agent Fund Misappropriation Detection System</h3>
+  <ul>
+    <li><strong>Project Link</strong>: <a href="https://github.com/chihling830/Shin-Kong-Agent-Fraud-Detection" target="_blank">GitHub Repository</a></li>
+    <li><strong>Algorithm Implementation</strong>: Implemented and cross-validated multiple machine learning models, including **XGBoost**, **Random Forest**, **SVM**, and **Logistic Regression**, on highly imbalanced audit data.</li>
+    <li><strong>Technical Challenges</strong>: Addressed imbalanced dataset issues using techniques like over-sampling (SMOTE) and threshold adjustment, prioritizing the optimization of **Recall** to ensure detection of rare fraudulent activities.</li>
+    <li><strong>Practical Value</strong>: Successfully identified high-risk patterns in agent fund flows and behaviors, assisting the internal audit department in establishing automated early warning indicators to strengthen ESG corporate governance and risk control.</li>
+  </ul>
+
+  <h3>3. STARLUX Airlines: North America Route Switching Option Analysis</h3>
+  <ul>
+    <li><strong>Strategic Concept</strong>: Modeled airline route deployment decisions under market uncertainty as a flexible **"Switching Option"**, moving beyond traditional NPV frameworks.</li>
+    <li><strong>Quantitative Modeling Details</strong>:
+      <ul>
+        <li>Defined the base scenario as operating the "Taipei-Los Angeles" route with the option to switch to the "Taipei-Vancouver" route.</li>
+        <li>Simulated future passenger demand paths and fuel cost fluctuations for both routes using Geometric Brownian Motion (GBM).</li>
+        <li>Calculated the optimal timing for route switching and fleet reallocation based on specific thresholds (e.g., load factors, yield levels), factoring in switching costs and incremental future cash flows.</li>
+      </ul>
+    </li>
+    <li><strong>Decision Support</strong>: Quantified the additional **Option Premium** derived from operational flexibility, enabling management to dynamically evaluate risks and rewards for major aircraft acquisitions and network planning.</li>
+  </ul>
+
+  <h3>4. Heart Disease Clinical Decision Support System (CDSS)</h3>
+  <ul>
+    <li><strong>Project Link</strong>: <a href="https://github.com/chihling830/heart-disease-cdss" target="_blank">GitHub Repository</a></li>
+    <li><strong>Robust Validation</strong>: Employed **Stratified 10-fold Cross-Validation** to ensure reliable model performance assessment and generalization on limited medical datasets.</li>
+    <li><strong>Explainable AI (XAI)</strong>: Integrated **SHAP (Shapley Additive exPlanations)** values to interpret feature importance, overcoming the "black box" nature of complex models by providing both global and local explanations for predictions.</li>
+    <li><strong>Clinical Impact</strong>: Translated quantitative risk probabilities into actionable clinical decision support metrics, enabling healthcare providers to rapidly identify critical risk factors.</li>
+  </ul>
+
+  <h2> Experience & Competitions</h2>
+  <ul>
+    <li><strong>Teaching & Research Assistant (TA/RA)</strong>:
+      <ul>
+        <li>TA for the **"Numerical Methods in Finance"** course at NYCU, assisting students with stochastic calculus derivations and the implementation of Monte Carlo simulations and finite difference methods.</li>
+      </ul>
+    </li>
+    <li><strong>Quantitative Finance Competitions</strong>:
+      <ul>
+        <li>**WorldQuant BRAIN Global Quantitative Trading Competition**: Constructed statistically significant predictive Alpha factors using global financial market data, optimizing portfolio performance under strict turnover and risk constraints.</li>
+        <li>**TAIFEX Quantitative Futures Trading Competition**: Developed rule-based automated futures trading strategies, utilizing technical indicators and econometric models for backtesting, with a focus on enhancing risk-adjusted returns (Sharpe Ratio).</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  function showLang(lang) {
+    const zh = document.getElementById('content-zh');
+    const en = document.getElementById('content-en');
+    const btnZh = document.getElementById('btn-zh');
+    const btnEn = document.getElementById('btn-en');
+    
+    if (lang === 'zh') {
+      zh.style.display = 'block';
+      en.style.display = 'none';
+      btnZh.classList.add('active');
+      btnEn.classList.remove('active');
+    } else {
+      zh.style.display = 'none';
+      en.style.display = 'block';
+      btnZh.classList.remove('active');
+      btnEn.classList.add('active');
+    }
+  }
+</script>
