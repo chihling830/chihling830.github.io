@@ -91,6 +91,11 @@ title: "Chihling Lo | Portfolio"
 
   <h2>🛠 專業技能</h2>
   <ul>
+    <li><strong>語言能力</strong>：
+      <ul>
+        <li><strong>TOEIC 多益</strong>：895 分</li>
+      </ul>
+    </li>
     <li><strong>程式語言與工具</strong>：
       <ul>
         <li><strong>Python</strong>: 熟練運用 Pandas 進行數據清洗，使用 Scikit-learn 與 XGBoost 進行機器學習建模與參數調優。</li>
@@ -189,6 +194,11 @@ title: "Chihling Lo | Portfolio"
   </ul>
 
   <h2>🛠 Technical Skills</h2>
+  <li><strong>Language</strong>:
+    <ul>
+      <li><strong>TOEIC</strong>: 895</li>
+    </ul>
+  </li>
   <ul>
     <li><strong>Data Mining & Algorithms</strong>：Gained in-depth understanding of the mathematical logic behind Data Mining algorithms at the graduate level in Industrial Engineering. Focused on the optimization objectives of classifiers, feature selection mechanisms, and model generalization analysis, beyond mere library application.</li>
     <li><strong>Financial Engineering Modeling</strong>：Proficient in stochastic processes and numerical methods. Capable of building option pricing models compliant with **FASB 123R** standards, utilizing **Trinomial Trees** and **Rank-Dependent Expected Utility (RDEU)** models for complex compensation and real options problems.</li>
