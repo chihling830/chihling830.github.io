@@ -62,14 +62,20 @@
 
     /* ========== 照片樣式 ========== */
     .hero-avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;       /* 圓形 */
-      object-fit: cover;        /* 裁切圖片以填滿 */
-      border: 4px solid #fff;   /* 白邊框 */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 陰影 */
-      margin-bottom: 24px;      /* 與下方文字的距離 */
-      display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%; /* 往下看一點，避免切到頭頂 */
+
+  border: 6px solid #fff;
+  box-shadow:
+    0 0 0 14px rgba(255, 255, 255, 0.65),
+    0 10px 22px rgba(0, 0, 0, 0.10);
+
+  margin-bottom: 24px;
+  display: block;
+}
     }
   </style>
 </head>
@@ -180,13 +186,14 @@
         </div> 
         <div class="about-block">
           <h2 class="section-title">Certifications</h2>
+          <div class="section-underline"></div>
           <ul class="project-points">
             <li><strong>TOEIC</strong> — 895</li>
           </ul>
         </div>
-
         <div class="about-block">
           <h2 class="section-title">Technical Skills</h2>
+          <div class="section-underline"></div>
           <ul class="project-points">
             <li><strong>Python</strong> — data analysis, machine learning, valuation models</li>
             <li><strong>MATLAB</strong> — numerical methods, option pricing, lattice models</li>
@@ -418,12 +425,14 @@
         </div> 
         <div class="about-block">
           <h2 class="section-title">證照與檢定</h2>
+          <div class="section-underline"></div>
           <ul class="project-points">
             <li><strong>多益 TOEIC</strong> — 895 分</li>
           </ul>
         </div>
         <div class="about-block">
           <h2 class="section-title">Technical Skills</h2>
+          <div class="section-underline"></div>
           <ul class="project-points">
             <li><strong>Python</strong> — data analysis, machine learning, valuation models</li>
             <li><strong>MATLAB</strong> — numerical methods, option pricing, lattice models</li>
