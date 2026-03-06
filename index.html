@@ -83,6 +83,8 @@
     }
   </style>
 </head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <body>
 
@@ -96,6 +98,7 @@
       <a href="#projects">Projects</a>
       <a href="#competitions">Competitions</a>
       <a href="#contact">Contact</a>
+      <a href="#travel">Travel</a>
     </div>
 
     <div id="nav-zh" class="nav-links hidden">
@@ -104,6 +107,7 @@
       <a href="#projects">專案</a>
       <a href="#competitions">競賽</a>
       <a href="#contact">聯絡</a>
+      <a href="#travel-zh">旅遊地圖</a>
     </div>
 
     <div class="lang-switch-container">
@@ -334,6 +338,22 @@
             <li>Integrated <strong>SHAP values</strong> to interpret feature importance, providing white-box explanations for black-box models.</li>
           </ul>
         </div>
+        <section id="travel" class="section">
+          <div class="section-inner">
+            <div class="section-title">Travel Map</div>
+            <div class="section-underline"></div>
+            <div class="travel-grid">
+              <div class="travel-map-wrap">
+                <div id="travelMapEn" class="travel-map"></div>
+                <p class="muted" style="margin-top:10px;">
+                  Click a pin to jump to the trip card.
+                </p>
+              </div>
+
+              <div class="travel-cards" id="travelCardsEn"></div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </section>
@@ -590,6 +610,20 @@
         <div class="project-card">
           <h3>期交所 (TAIFEX) 量化交易競賽</h3>
           <p class="project-desc">開發基於規則的自動化期貨交易策略，結合技術指標與計量模型，專注於提升 Sharpe Ratio (夏普比率)。</p>
+        </div>
+      </div>
+    </section>
+    <section id="travel-zh" class="section">
+      <div class="section-inner">
+        <div class="section-title">旅遊地圖</div>
+        <div class="section-underline"></div>
+        <div class="travel-grid">
+          <div class="travel-map-wrap">
+          <p class="muted" style="margin-top:10px;">
+          點地圖圖釘會自動捲到對應的旅程卡片。
+          </p>
+          </div>
+          <div class="travel-cards" id="travelCardsZh">
         </div>
       </div>
     </section>
