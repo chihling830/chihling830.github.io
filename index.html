@@ -684,7 +684,140 @@
       btnEn.classList.add('active');
     }
   }
+  const travelTripsEn = [
+    {
+      id: "jeju-202406",
+      title: "Jeju",
+      date: "2024/06/12–06/17",
+      coords: [33.4996, 126.5312],
+      highlights: ["Coastline & cafés", "Nature spots", "Slow travel vibe"],
+      pdf: "travel_pdfs/20240612-0617_jeju.pdf"
+    },
+    {
+      id: "busan-202401",
+      title: "Busan",
+      date: "2024/01/18–01/22",
+      coords: [35.1796, 129.0756],
+      highlights: ["Haeundae / coastal walk", "Local markets", "City night view"],
+      pdf: "travel_pdfs/20240118-0122_busan.pdf"
+    },
+    {
+      id: "busan-202501",
+      title: "Busan (2nd visit)",
+      date: "2025/01/08–01/13",
+      coords: [35.1796, 129.0756],
+      highlights: ["More local routes", "Food list revisit", "Winter seaside"],
+      pdf: "travel_pdfs/20250108-0113_busan2.pdf"
+    },
+    {
+      id: "osaka-202510",
+      title: "Osaka",
+      date: "2025/10/13–10/17",
+      coords: [34.6937, 135.5023],
+      highlights: ["Urban exploration", "Day trips", "Food & shopping"],
+      pdf: "travel_pdfs/20251013-1017_osaka.pdf"
+    }
+  ];
+
+  const travelTripsZh = [
+    {
+      id: "jeju-202406-zh",
+      title: "濟州",
+      date: "2024/06/12–06/17",
+      coords: [33.4996, 126.5312],
+      highlights: ["海岸線 / 咖啡廳", "自然景點", "慢旅節奏"],
+      pdf: "https://drive.google.com/file/d/1WoIf3863ZtFL0jPSOkF8PVBTkKGrvA_q/view?usp=sharing"
+    },
+    {
+      id: "busan-202401-zh",
+      title: "釜山",
+      date: "2024/01/18–01/22",
+      coords: [35.1796, 129.0756],
+      highlights: ["海雲台 / 海岸散步", "在地市場", "夜景路線"],
+      pdf: "https://drive.google.com/file/d/1xuffJ5jWroYTlTg8ZvXPpPQGYNeQV5bL/view?usp=sharing"
+    },
+    {
+      id: "busan-202501-zh",
+      title: "釜山（二訪）",
+      date: "2025/01/08–01/13",
+      coords: [35.1796, 129.0756],
+      highlights: ["更在地的路線", "美食清單回訪", "冬季海邊"],
+      pdf: "https://drive.google.com/file/d/17jEX6MI36ERcd1iE41VHR1kWLuVnB1Fz/view?usp=sharing"
+    },
+    {
+      id: "osaka-202510-zh",
+      title: "大阪",
+      date: "2025/10/13–10/17",
+      coords: [34.6937, 135.5023],
+      highlights: ["城市散策", "近郊一日", "美食購物"],
+      pdf: "https://drive.google.com/file/d/158Z6D4sIX7eM1g37BJHO3-_D9iZbYCt0/view?usp=sharing"
+    }
+  ];
+
+  function renderTripCards(containerId, trips) {
+    const wrap = document.getElementById(containerId);
+    wrap.innerHTML = trips.map(t => `
+      <div class="project-card" id="${t.id}">
+        <div class="project-header">
+          <div>
+            <h3>${t.title}</h3>
+            <span class="project-date">${t.date}</span>
+          </div>
+          <div class="project-links">
+            <a class="btn outline" href="${t.pdf}" target="_blank">Read PDF</a>
+          </div>
+        </div>
+        <ul class="project-points">
+          ${t.highlights.map(h => `<li>${h}</li>`).join("")}
+        </ul>
+      </div>
+    `).join("");
+  }
+
+  function initTravelMap(mapId, trips, cardsWrapId) {
+    const mapEl = document.getElementById(mapId);
+    if (!mapEl) return;
+
+    const map = L.map(mapId, { scrollWheelZoom: false }).setView([34.8, 135.2], 5);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap"
+    }).addTo(map);
+
+    const group = L.featureGroup();
+
+    trips.forEach(t => {
+      const marker = L.marker(t.coords).addTo(map);
+      marker.bindPopup(`<b>${t.title}</b><br/>${t.date}`);
+
+      marker.on("click", () => {
+        // 捲到卡片
+        const card = document.getElementById(t.id);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "start" });
+          // 簡單高亮（可選）
+          card.style.outline = "2px solid #111827";
+          card.style.outlineOffset = "4px";
+          setTimeout(() => { card.style.outline = "none"; }, 900);
+        }
+      });
+
+      group.addLayer(marker);
+    });
+
+    map.fitBounds(group.getBounds().pad(0.25));
+  }
+
+  // 初次載入：渲染卡片與地圖
+  document.addEventListener("DOMContentLoaded", () => {
+    renderTripCards("travelCardsEn", travelTripsEn);
+    renderTripCards("travelCardsZh", travelTripsZh);
+
+    initTravelMap("travelMapEn", travelTripsEn, "travelCardsEn");
+    initTravelMap("travelMapZh", travelTripsZh, "travelCardsZh");
+  });
 </script>
+  
 
 </body>
 </html>
