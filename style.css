@@ -333,3 +333,42 @@ p.muted {
   gap: 12px;
   margin: 12px 0 16px;
 }
+/* ===== Travel Section ===== */
+.travel-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.travel-map{
+  width: 100%;
+  height: 520px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.travel-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 520px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+/* 讓右邊卡片滾動條看起來更乾淨（可選） */
+.travel-cards::-webkit-scrollbar{ width: 8px; }
+.travel-cards::-webkit-scrollbar-thumb{
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+/* 小螢幕改成上下排列 */
+@media (max-width: 980px){
+  .travel-grid{ grid-template-columns: 1fr; }
+  .travel-map{ height: 360px; }
+  .travel-cards{ max-height: none; overflow: visible; padding-right: 0; }
+}
