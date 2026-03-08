@@ -375,21 +375,20 @@ p.muted {
 <style>
   /* 你原本的 style 保留，下面這段加進去 */
 
-  .travel-photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 16px;
-  }
+.travel-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
 
-  .travel-photo-grid img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  }
+.travel-photo-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
 
   .travel-map {
     width: 100%;
