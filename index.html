@@ -660,6 +660,8 @@
 </footer>
 
 <script>
+  const travelMaps = {};
+
   function switchLanguage(lang) {
     const contentEn = document.getElementById('content-en');
     const contentZh = document.getElementById('content-zh');
@@ -675,6 +677,12 @@
       navZh.classList.remove('hidden');
       btnEn.classList.remove('active');
       btnZh.classList.add('active');
+
+      setTimeout(() => {
+        if (travelMaps["travelMapZh"]) {
+          travelMaps["travelMapZh"].invalidateSize();
+        }
+      }, 250);
     } else {
       contentZh.classList.add('hidden');
       contentEn.classList.remove('hidden');
@@ -682,8 +690,15 @@
       navEn.classList.remove('hidden');
       btnZh.classList.remove('active');
       btnEn.classList.add('active');
+
+      setTimeout(() => {
+        if (travelMaps["travelMapEn"]) {
+          travelMaps["travelMapEn"].invalidateSize();
+        }
+      }, 250);
     }
   }
+
   const travelTripsEn = [
     {
       id: "jeju-202406",
@@ -693,10 +708,10 @@
       highlights: ["Coastline & cafés", "Nature spots", "Slow travel vibe"],
       pdf: "travel_pdfs/20240612-0617_jeju.pdf",
       photos: [
-      "images/travel/jeju1.JPG",
-      "images/travel/jeju2.JPG",
-      "images/travel/jeju3.JPG"
-    ]
+        "images/travel/jeju1.JPG",
+        "images/travel/jeju2.JPG",
+        "images/travel/jeju3.JPG"
+      ]
     },
     {
       id: "busan-202401",
@@ -706,10 +721,10 @@
       highlights: ["Haeundae / coastal walk", "Local markets", "City night view"],
       pdf: "travel_pdfs/20240118-0122_busan.pdf",
       photos: [
-      "images/travel/busan1_1.JPG",
-      "images/travel/jbusan1_2.JPG",
-      "images/travel/busan1_3.JPG"
-    ]
+        "images/travel/busan1_1.JPG",
+        "images/travel/busan1_2.JPG",
+        "images/travel/busan1_3.JPG"
+      ]
     },
     {
       id: "busan-202501",
@@ -719,10 +734,10 @@
       highlights: ["More local routes", "Food list revisit", "Winter seaside"],
       pdf: "travel_pdfs/20250108-0113_busan2.pdf",
       photos: [
-      "images/travel/busan2_1.JPG",
-      "images/travel/busan2_2.JPG",
-      "images/travel/busan2_3.JPG"
-    ]
+        "images/travel/busan2_1.JPG",
+        "images/travel/busan2_2.JPG",
+        "images/travel/busan2_3.JPG"
+      ]
     },
     {
       id: "osaka-202510",
@@ -732,10 +747,10 @@
       highlights: ["Urban exploration", "Day trips", "Food & shopping"],
       pdf: "travel_pdfs/20251013-1017_osaka.pdf",
       photos: [
-      "images/travel/osaka1.JPG",
-      "images/travel/osaka2.JPG",
-      "images/travel/osaka3.JPG"
-    ]
+        "images/travel/osaka1.JPG",
+        "images/travel/osaka2.JPG",
+        "images/travel/osaka3.JPG"
+      ]
     }
   ];
 
@@ -746,7 +761,12 @@
       date: "2024/06/12–06/17",
       coords: [33.4996, 126.5312],
       highlights: ["海岸線 / 咖啡廳", "自然景點", "慢旅節奏"],
-      pdf: "https://drive.google.com/file/d/1WoIf3863ZtFL0jPSOkF8PVBTkKGrvA_q/view?usp=sharing"
+      pdf: "https://drive.google.com/file/d/1WoIf3863ZtFL0jPSOkF8PVBTkKGrvA_q/view?usp=sharing",
+      photos: [
+        "images/travel/jeju1.JPG",
+        "images/travel/jeju2.JPG",
+        "images/travel/jeju3.JPG"
+      ]
     },
     {
       id: "busan-202401-zh",
@@ -754,7 +774,12 @@
       date: "2024/01/18–01/22",
       coords: [35.1796, 129.0756],
       highlights: ["海雲台 / 海岸散步", "在地市場", "夜景路線"],
-      pdf: "https://drive.google.com/file/d/1xuffJ5jWroYTlTg8ZvXPpPQGYNeQV5bL/view?usp=sharing"
+      pdf: "https://drive.google.com/file/d/1xuffJ5jWroYTlTg8ZvXPpPQGYNeQV5bL/view?usp=sharing",
+      photos: [
+        "images/travel/busan1_1.JPG",
+        "images/travel/busan1_2.JPG",
+        "images/travel/busan1_3.JPG"
+      ]
     },
     {
       id: "busan-202501-zh",
@@ -762,7 +787,12 @@
       date: "2025/01/08–01/13",
       coords: [35.1796, 129.0756],
       highlights: ["更在地的路線", "美食清單回訪", "冬季海邊"],
-      pdf: "https://drive.google.com/file/d/17jEX6MI36ERcd1iE41VHR1kWLuVnB1Fz/view?usp=sharing"
+      pdf: "https://drive.google.com/file/d/17jEX6MI36ERcd1iE41VHR1kWLuVnB1Fz/view?usp=sharing",
+      photos: [
+        "images/travel/busan2_1.JPG",
+        "images/travel/busan2_2.JPG",
+        "images/travel/busan2_3.JPG"
+      ]
     },
     {
       id: "osaka-202510-zh",
@@ -770,12 +800,19 @@
       date: "2025/10/13–10/17",
       coords: [34.6937, 135.5023],
       highlights: ["城市散策", "近郊一日", "美食購物"],
-      pdf: "https://drive.google.com/file/d/158Z6D4sIX7eM1g37BJHO3-_D9iZbYCt0/view?usp=sharing"
+      pdf: "https://drive.google.com/file/d/158Z6D4sIX7eM1g37BJHO3-_D9iZbYCt0/view?usp=sharing",
+      photos: [
+        "images/travel/osaka1.JPG",
+        "images/travel/osaka2.JPG",
+        "images/travel/osaka3.JPG"
+      ]
     }
   ];
 
-  function renderTripCards(containerId, trips) {
+  function renderTripCards(containerId, trips, lang = "en") {
     const wrap = document.getElementById(containerId);
+    if (!wrap) return;
+
     wrap.innerHTML = trips.map(t => `
       <div class="project-card" id="${t.id}">
         <div class="project-header">
@@ -784,57 +821,76 @@
             <span class="project-date">${t.date}</span>
           </div>
           <div class="project-links">
-            <a class="btn outline" href="${t.pdf}" target="_blank">Read PDF</a>
+            <a class="btn outline" href="${t.pdf}" target="_blank">
+              ${lang === "zh" ? "查看 PDF" : "Read PDF"}
+            </a>
           </div>
         </div>
+
         <ul class="project-points">
           ${t.highlights.map(h => `<li>${h}</li>`).join("")}
         </ul>
+
+        <div class="travel-photo-grid">
+          ${(t.photos || []).slice(0, 3).map(photo => `
+            <img src="${photo}" alt="${t.title}">
+          `).join("")}
+        </div>
       </div>
     `).join("");
   }
 
-  function initTravelMap(mapId, trips, cardsWrapId) {
+  function initTravelMap(mapId, trips) {
     const mapEl = document.getElementById(mapId);
     if (!mapEl) return;
 
-    const map = L.map(mapId, { scrollWheelZoom: false }).setView([34.8, 135.2], 5);
+    const map = L.map(mapId, { scrollWheelZoom: false }).setView([34.8, 129.5], 5);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "© OpenStreetMap"
     }).addTo(map);
 
-    const group = L.featureGroup();
+    const markers = [];
 
     trips.forEach(t => {
       const marker = L.marker(t.coords).addTo(map);
-      marker.bindPopup(`<b>${t.title}</b><br/>${t.date}`);
+      marker.bindPopup(`<b>${t.title}</b><br>${t.date}`);
 
       marker.on("click", () => {
-        // 捲到卡片
         const card = document.getElementById(t.id);
         if (card) {
           card.scrollIntoView({ behavior: "smooth", block: "start" });
-          // 簡單高亮（可選）
           card.style.outline = "2px solid #111827";
           card.style.outlineOffset = "4px";
-          setTimeout(() => { card.style.outline = "none"; }, 900);
+          setTimeout(() => {
+            card.style.outline = "none";
+          }, 900);
         }
       });
 
-      group.addLayer(marker);
+      markers.push(marker);
     });
 
-    map.fitBounds(group.getBounds().pad(0.25));
+    if (markers.length > 0) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.25));
+    }
+
+    travelMaps[mapId] = map;
   }
 
-  // 初次載入：渲染卡片與地圖
   document.addEventListener("DOMContentLoaded", () => {
-    renderTripCards("travelCardsEn", travelTripsEn);
-    renderTripCards("travelCardsZh", travelTripsZh);
+    renderTripCards("travelCardsEn", travelTripsEn, "en");
+    renderTripCards("travelCardsZh", travelTripsZh, "zh");
 
-    initTravelMap("travelMapEn", travelTripsEn, "travelCardsEn");
-    initTravelMap("travelMapZh", travelTripsZh, "travelCardsZh");
+    initTravelMap("travelMapEn", travelTripsEn);
+    initTravelMap("travelMapZh", travelTripsZh);
+
+    setTimeout(() => {
+      if (travelMaps["travelMapEn"]) {
+        travelMaps["travelMapEn"].invalidateSize();
+      }
+    }, 250);
   });
 </script>
   
