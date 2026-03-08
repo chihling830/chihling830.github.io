@@ -378,16 +378,28 @@ p.muted {
 .travel-photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 14px;
   margin-top: 16px;
 }
 
-.travel-photo-grid img {
-  width: 100%;
+.travel-photo-frame {
+  border: 1.5px solid #d1d5db;
+  border-radius: 14px;
+  padding: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.travel-photo-frame img {
+  width: 85%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 12px;
+  object-fit: contain;
   display: block;
+  border-radius: 10px;
+  background: #f9fafb;
 }
 
   .travel-map {
